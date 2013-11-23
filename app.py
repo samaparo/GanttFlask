@@ -22,6 +22,10 @@ class Task(db.Model):
 	def toJObject(self):
 		return {'id': self.id, 'name': self.name, 'start': self.start.strftime('%m/%d/%Y'), 'end':self.end.strftime('%m/%d/%Y')}
 	
+	@staticmethod
+	def isValidJSON(jObject):
+		return jObject and 'name' in request.json and 'start' in request.json and 'end' in request.json
+	
 @app.route('/api/tasks/', methods=['GET'])
 def getAllTasks():
 	allTasks = Task.query.all()
@@ -40,7 +44,7 @@ def getTask(taskID):
 @app.route('/api/tasks/', methods=['POST'])
 def newTask():
 	jsonData = request.get_json(force=True)
-	if(not request.json or not 'name' in request.json or not 'start' in request.json or not 'end' in request.json):
+	if(not Task.isValidJSON(jsonData)):
 		abort(400)
 	
 	newTask = Task(request.json['name'], datetime.strptime(request.json['start'],'%m/%d/%Y'), datetime.strptime(request.json['end'],'%m/%d/%Y'))
@@ -50,12 +54,30 @@ def newTask():
 
 @app.route('/api/tasks/<int:taskID>', methods=['PUT'])
 def updateTask(taskID):
+	matchingTask = Task.query.filter_by(id=taskID).first()
 	jsonData = request.get_json(force=True)
-	return jsonify(jsonData)
+	if matchingTask == None:
+		abort(404)
+	elif not Task.isValidJSON(jsonData):
+		abort(400)
+	
+	matchingTask.name = request.json['name']
+	matchingTask.start = datetime.strptime(request.json['start'],'%m/%d/%Y')
+	matchingTask.end = datetime.strptime(request.json['end'],'%m/%d/%Y')
+	db.session.commit()
+	
+	return jsonify(matchingTask.toJObject())
 
 @app.route('/api/tasks/<int:taskID>', methods=['DELETE'])
 def deleteTask(taskID):
-	return ''
+	matchingTask = Task.query.filter_by(id=taskID).first()
+	jsonData = request.get_json(force=True)
+	if matchingTask == None:
+		abort(404)
+		
+	db.session.delete(matchingTask)
+	db.session.commit()
+	return jsonify({'result':True})
 
 if __name__ == '__main__':
 	app.run(debug=True)
