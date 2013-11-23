@@ -11,8 +11,17 @@ def getTask(taskID):
 
 @app.route('/api/tasks/', methods=['POST'])
 def newTask():
-	test = request.json['name']
-	return jsonify(test)
+	jsonData = request.get_json(force=True)
+	return jsonify(jsonData)
+
+@app.route('/api/tasks/<int:taskID>', methods=['PUT'])
+def updateTask(taskID):
+	jsonData = request.get_json(force=True)
+	return jsonify(jsonData)
+
+@app.route('/api/tasks/<int:taskID>', methods=['DELETE'])
+def deleteTask(taskID):
+	return ''
 
 if __name__ == '__main__':
 	app.run(debug=True)
