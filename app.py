@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask.ext.sqlalchemy import SQLAlchemy
+from datetime import date
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -18,9 +19,16 @@ class Task(db.Model):
 		self.start = start
 		self.end = end
 	
+	def toJObject(self):
+		return {'id': self.id, 'name': self.name, 'start': self.start, 'end':self.end}
+	
 @app.route('/api/tasks/', methods=['GET'])
 def getAllTasks():
-	return jsonify({'tasks':['A', 'B']})
+	allTasks = Task.query.all()
+	jObjects = []
+	for task in allTasks:
+		jObjects.append(task.toJObject())
+	return jsonify({'TASKS':jObjects})
 
 @app.route('/api/tasks/<int:taskID>', methods=['GET'])
 def getTask(taskID):
@@ -28,6 +36,9 @@ def getTask(taskID):
 
 @app.route('/api/tasks/', methods=['POST'])
 def newTask():
+	newTask = Task('new task', date.today(), date.today())
+	db.session.add(newTask)
+	db.session.commit()
 	jsonData = request.get_json(force=True)
 	return jsonify(jsonData)
 
