@@ -1,6 +1,6 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from flask.ext.sqlalchemy import SQLAlchemy
-from datetime import date
+from datetime import date, datetime
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -20,7 +20,7 @@ class Task(db.Model):
 		self.end = end
 	
 	def toJObject(self):
-		return {'id': self.id, 'name': self.name, 'start': self.start, 'end':self.end}
+		return {'id': self.id, 'name': self.name, 'start': self.start.strftime('%m/%d/%Y'), 'end':self.end.strftime('%m/%d/%Y')}
 	
 @app.route('/api/tasks/', methods=['GET'])
 def getAllTasks():
@@ -32,15 +32,21 @@ def getAllTasks():
 
 @app.route('/api/tasks/<int:taskID>', methods=['GET'])
 def getTask(taskID):
-	return jsonify({'name':'task'+str(taskID)})
+	matchingTask = Task.query.filter_by(id=taskID).first()
+	if matchingTask == None:
+		abort(404)
+	return jsonify(matchingTask.toJObject())
 
 @app.route('/api/tasks/', methods=['POST'])
 def newTask():
-	newTask = Task('new task', date.today(), date.today())
+	jsonData = request.get_json(force=True)
+	if(not request.json or not 'name' in request.json or not 'start' in request.json or not 'end' in request.json):
+		abort(400)
+	
+	newTask = Task(request.json['name'], datetime.strptime(request.json['start'],'%m/%d/%Y'), datetime.strptime(request.json['end'],'%m/%d/%Y'))
 	db.session.add(newTask)
 	db.session.commit()
-	jsonData = request.get_json(force=True)
-	return jsonify(jsonData)
+	return jsonify(newTask.toJObject())
 
 @app.route('/api/tasks/<int:taskID>', methods=['PUT'])
 def updateTask(taskID):
