@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, request, abort
+from flask import Flask, jsonify, request, abort, url_for, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from datetime import date, datetime
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
 db = SQLAlchemy(app)
 
@@ -22,11 +22,15 @@ class Task(db.Model):
 		self.number = number
 	
 	def toJObject(self):
-		return {'id': self.id, 'name': self.name, 'start': self.start.strftime('%m/%d/%Y'), 'end':self.end.strftime('%m/%d/%Y'), 'number':self.number}
+		return {'id': self.id, 'name': self.name, 'startDate': self.start.strftime('%m/%d/%Y'), 'endDate':self.end.strftime('%m/%d/%Y'), 'number':self.number}
 	
 	@staticmethod
 	def isValidJSON(jObject):
-		return jObject and 'name' in jObject and 'start' in jObject and 'end' in jObject and 'number' in jObject
+		return jObject and 'name' in jObject and 'startDate' in jObject and 'endDate' in jObject and 'number' in jObject
+
+@app.route('/', methods=['GET'])
+def renderIndex(): 
+	return render_template('index.html')
 	
 @app.route('/api/tasks/', methods=['GET'])
 def getAllTasks():
@@ -49,7 +53,7 @@ def newTask():
 	if(not Task.isValidJSON(jsonData)):
 		abort(400)
 	
-	newTask = Task(request.json['name'], datetime.strptime(request.json['start'],'%m/%d/%Y'), datetime.strptime(request.json['end'],'%m/%d/%Y'), int(request.json['number']))
+	newTask = Task(request.json['name'], datetime.strptime(request.json['startDate'],'%m/%d/%Y'), datetime.strptime(request.json['endDate'],'%m/%d/%Y'), int(request.json['number']))
 	db.session.add(newTask)
 	db.session.commit()
 	return jsonify(newTask.toJObject())
@@ -64,8 +68,8 @@ def updateTask(taskID):
 		abort(400)
 	
 	matchingTask.name = request.json['name']
-	matchingTask.start = datetime.strptime(request.json['start'],'%m/%d/%Y')
-	matchingTask.end = datetime.strptime(request.json['end'],'%m/%d/%Y')
+	matchingTask.start = datetime.strptime(request.json['startDate'],'%m/%d/%Y')
+	matchingTask.end = datetime.strptime(request.json['endDate'],'%m/%d/%Y')
 	matchingTask.number = int(request.json['number'])
 	db.session.commit()
 	
