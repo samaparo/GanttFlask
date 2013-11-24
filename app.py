@@ -13,18 +13,20 @@ class Task(db.Model):
 	name = db.Column(db.String(256))
 	start = db.Column(db.Date)
 	end = db.Column(db.Date)
+	number = db.Column(db.Integer)
 	
-	def __init__(self, name, start, end):
+	def __init__(self, name, start, end, number):
 		self.name = name
 		self.start = start
 		self.end = end
+		self.number = number
 	
 	def toJObject(self):
-		return {'id': self.id, 'name': self.name, 'start': self.start.strftime('%m/%d/%Y'), 'end':self.end.strftime('%m/%d/%Y')}
+		return {'id': self.id, 'name': self.name, 'start': self.start.strftime('%m/%d/%Y'), 'end':self.end.strftime('%m/%d/%Y'), 'number':self.number}
 	
 	@staticmethod
 	def isValidJSON(jObject):
-		return jObject and 'name' in request.json and 'start' in request.json and 'end' in request.json
+		return jObject and 'name' in jObject and 'start' in jObject and 'end' in jObject and 'number' in jObject
 	
 @app.route('/api/tasks/', methods=['GET'])
 def getAllTasks():
@@ -47,7 +49,7 @@ def newTask():
 	if(not Task.isValidJSON(jsonData)):
 		abort(400)
 	
-	newTask = Task(request.json['name'], datetime.strptime(request.json['start'],'%m/%d/%Y'), datetime.strptime(request.json['end'],'%m/%d/%Y'))
+	newTask = Task(request.json['name'], datetime.strptime(request.json['start'],'%m/%d/%Y'), datetime.strptime(request.json['end'],'%m/%d/%Y'), int(request.json['number']))
 	db.session.add(newTask)
 	db.session.commit()
 	return jsonify(newTask.toJObject())
@@ -64,6 +66,7 @@ def updateTask(taskID):
 	matchingTask.name = request.json['name']
 	matchingTask.start = datetime.strptime(request.json['start'],'%m/%d/%Y')
 	matchingTask.end = datetime.strptime(request.json['end'],'%m/%d/%Y')
+	matchingTask.number = int(request.json['number'])
 	db.session.commit()
 	
 	return jsonify(matchingTask.toJObject())
