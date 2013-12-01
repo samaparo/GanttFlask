@@ -42,7 +42,7 @@ app.Collections = app.Collections || {};
 				name: currentEvent.get('name'),
 				dateString: currentEvent.get('startDate') === currentEvent.get('endDate') ? currentEvent.get('startDate') : currentEvent.get('startDate') + " to " + currentEvent.get('endDate'),
 				top: (currentEvent.get('number') * 26) + 3,
-				left: (Math.ceil((currentEvent.startAsDate().getTime() - app.gridStart.getTime()) / this.dayInMS) * 26) - 1,
+				left: (Math.floor((currentEvent.startAsDate().getTime() - app.gridStart.getTime()) / this.dayInMS) * 26) - 1,
 				width: Math.ceil((currentEvent.endAsDatePlusOne().getTime() - currentEvent.startAsDate().getTime()) / this.dayInMS) * 26
 			};
 			
