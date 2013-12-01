@@ -1,0 +1,204 @@
+$light-border: solid 1px #d0d0d0;
+$link-blue: #4099FF;
+
+#toolbarWrap{
+	padding-left: 25px;
+	span {
+		color: $link-blue;
+		font-weight:bold;
+		text-decoration: underline;
+		padding-right: 5px;
+		cursor:pointer;
+	}
+}
+
+#mainWrap{
+	width:1000px;
+	height: 500px;
+	border:$light-border;
+	overflow:hidden;
+}
+#gantt {
+	width:1000px;
+	height:100%;
+	float:left;
+	position:relative;
+	white-space:nowrap;
+	overflow-x:scroll;
+	overflow-y:scroll;
+	#numberWrap {
+		display:inline-block;
+		width:25px;
+		z-index: 5;
+		position:absolute;
+		left:0px;
+		top:71px;
+		border-right:$light-border;
+		border-top:$light-border;
+		div{
+			width:100%;
+			height:25px;
+			float:left;
+			border-bottom: $light-border;
+			background-color:#F0F2F1;
+			text-align: center;
+
+			span{
+				font-size: 8pt;
+				color: #464749;
+				font-weight:bold;
+			}
+		}
+	}
+	#eventWrap{
+		position:absolute;
+		z-index:3;
+		left:26px;
+		top: 72px;
+		height:100%;
+
+		.event {
+			position:absolute !important;
+			height: 18px;
+			white-space:nowrap;
+			overflow:hidden;
+			background-color:#dfecf5;
+			border: solid 1px #bbc9d2;
+			cursor: pointer;
+			span{
+				color:#616e77;
+				font-size:8pt;
+			}
+			span:first-child{
+				font-weight:bold;
+				padding-left:3px;
+			}
+		}
+		.highlighted {
+			background-color: #ffdd8a;
+			border-color: #f7c13e;
+			
+			span {
+				color: #555555;
+			}
+		}
+	}
+	#gridWrap{
+		position:absolute;
+		font-size:0;
+		white-space:nowrap;
+		z-index:2;
+		left:25px; 
+		top:72px;
+		height: 100%;
+		min-height: 500px;
+		border-left: $light-border;
+		div {
+			display:inline-block;
+			width:25px; 
+			height: 100%;
+			border-left: $light-border;
+			border-left-style: dashed;
+		}
+		div:first-child{
+			border-left:none !important;
+		}
+
+		.dayOff{
+			background-color:#F9F9F9;
+		}
+		.firstDayOfMonth{
+			border-left-style:solid;
+		}
+	}
+	#monthWrap{
+		display:inline-block;
+		position:absolute;
+		white-space: nowrap;
+		z-index:2;
+		font-size:0;
+		left:25px;
+		top:0px;
+		height:71px;
+		border-bottom:$light-border;
+		border-left:$light-border;
+		.month{
+			display:inline-block;
+			height: 100%;
+			overflow:hidden;
+			border-right: $light-border;
+
+			.top{
+				height:39px;
+				float:left;
+				background-color: #F2F9FD;
+				border-bottom:$light-border;
+
+				span{
+					font-size:9pt; 
+					float:left;
+					width:100%;
+					color: gray;
+					padding-left:5px; 
+				}
+			}
+
+			.bottom {
+				height:31px;
+				float:left;
+
+				div {
+					width:25px;
+					height:31px;
+					float:left;
+					border-left:$light-border;
+					overflow: hidden;
+					text-align:center;
+					span {
+						display:block;
+						font-size:8pt;
+					}
+
+				}
+
+				div:first-child {
+					border-left:none;
+				}
+			}
+		}
+	}
+}
+
+/*#list{
+	width:25px; 
+	height:100%;
+	float:left;
+	border-right:$light-border;
+	overflow:hidden;
+	position:relative;
+
+	#numberWrap {
+		width:26px;
+		height:100%;
+		position:absolute;
+		left:0px;
+		top:71px;
+		border-top:$light-border;
+
+		div{
+			width:100%;
+			height:25px;
+			float:left;
+			border-bottom: $light-border;
+			background-color:#F0F2F1;
+			text-align: center;
+
+			span{
+				font-size: 8pt;
+				color: #464749;
+				font-weight:bold;
+			}
+		}
+	}
+
+}*/

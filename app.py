@@ -1,5 +1,6 @@
-from flask import Flask, jsonify, request, abort, url_for, render_template
+from flask import Flask, jsonify, request, abort, url_for, render_template, make_response
 from flask.ext.sqlalchemy import SQLAlchemy
+from json import dumps
 from datetime import date, datetime
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -38,7 +39,8 @@ def getAllTasks():
 	jObjects = []
 	for task in allTasks:
 		jObjects.append(task.toJObject())
-	return jsonify({'TASKS':jObjects})
+	#return jsonify({'TASKS':jObjects})
+	return make_response(dumps(jObjects))
 
 @app.route('/api/tasks/<int:taskID>', methods=['GET'])
 def getTask(taskID):

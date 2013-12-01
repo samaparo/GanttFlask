@@ -1,0 +1,1584 @@
+body { padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px; font-family: Arial; font-size: 10pt; background: #58595B url(../imageBank/new_pageBackground2.gif) repeat-x; min-width: 1080px; }
+img { border-style: none; -ms-interpolation-mode: bicubic; overflow: hidden; }
+select { height: 22px; }
+a { outline: none; }
+textarea{resize:none;}
+
+.create, .search, .upload { }
+
+.sidebarNotificationRow { border-bottom: solid 1px gray; padding: 8px 0px 8px 8px; }
+
+#newMenuDivider {height:1px; width:135px; margin-left:8px; margin-top:3px;   border-bottom:solid 1px #C5C5C5;}
+.mbbDivider {height:1px; width:150px; margin-left:8px; margin-top:3px;   border-bottom:solid 1px #C5C5C5; background-color:White;}
+
+.customHeaderWrap {display:none; position:absolute; left:30px; top:34px;  padding-top:12px; }
+.customHeaderWrap img {display:block; float:left; }
+.customHeaderName {display:block; font-size:12pt; color:White; font-weight:bold;}
+.customHeaderTagText {display:block; font-size:10pt; color:White; }
+.customHeaderTaglineWrap {float:left; padding-top:9px; padding-left:20px;}
+.customHeaderDarkText {color:#58595b;}
+.customHeaderDarkText a {color:#58595b;}
+.customHeaderDarkText td {border-right:solid 1px #58595b;}
+.customHeaderWhiteText {color:White;}
+.customHeaderWhiteText a{color:White;}
+.customHeaderWhiteText td {border-right:solid 1px white;}
+
+.newModal { margin: auto; width: 450px; color: #58595B; display: none; font-size: 9pt; }
+.modalContent { width: 402px; background-color: #E6E6E6; padding: 16px 16px 0px 32px; overflow: auto; }
+.modalContentSkinny { width: 354px; background-color: #E6E6E6; padding: 32px 16px 16px 16px; }
+.modalContentWide { width: 682px; background-color: #E6E6E6; padding: 16px 16px 0px 32px; overflow: hidden; }
+.modalContentMedium { width: 482px; background-color: #E6E6E6; padding:  16px 16px 0px 32px; overflow: auto; }
+.modalContentHeader { width: 418px; background-color: #E6E6E6; border-bottom: solid 1px gray; padding: 16px 16px 16px 16px; font-weight: bold; overflow: auto; }
+.modalBackground { background-color: Gray; filter: alpha(opacity=85); opacity: 0.85; }
+.modalPopup { background-color: #ffffdd; border-width: 3px; border-style: solid; border-color: Gray; padding: 3px; width: 250px; }
+.modalHeaderTitle { float: right; text-align: right; color: #58595B; font-weight: bold; font-size: 12pt; line-height: 50px; }
+
+.modalHolidayCheckboxSection {float:left; }
+.modalHolidayCheckboxSection div {padding-bottom:6px;}
+
+.modalHolidaySection {display:none;}
+.modalHolidaySectionVisible {display:block;}
+
+.modalHolidayRadioSection div {padding-bottom:10px; display:inline-block;}
+.modalHolidayRadioSection .flagLabel {display:block; padding-left:30px; padding-top:2px; background-position:0px 2px; background-repeat:no-repeat; width:100px; float:left;}
+.modalHolidayRadioSection .flagRadio {display:block; float:left; margin-right:8px;}
+.flagLabelUS {background-image: url('/imageBank/schedule/flag_us.png');}
+.flagLabelCA {background-image: url('/imageBank/schedule/flag_canada.png');}
+.flagLabelUK {background-image: url('/imageBank/schedule/flag_uk.png');}
+.flagLabelAU {background-image: url('/imageBank/schedule/flag_aus.png');}
+.flagLabelNZ {background-image: url('/imageBank/schedule/flag_nz.png');}
+.flagLabelSA {background-image: url('/imageBank/schedule/flag_s_africa.png');}
+
+.modalGroupInputSection {float:left; width:190px; height:100%;}
+.modalGroupInputSection span {display:block; float:left; padding-top:5px; }
+.modalGroupInputSection div {width:100%; height:38px; float:left;}
+.modalGroupInputSection input {float:right; width:95px; font-size:8pt; padding:2px 0px 2px 2px;}
+                        
+
+.modalTaskUpDown {position:absolute; top:2px; right:1px; width:18px; height:17px; background:url('/imageBank/Icons/updownActive.png') no-repeat;  cursor:pointer;}
+.modalTaskReminderUpDown {position:absolute; top:2px; right:1px; width:18px; height:17px; background:url('/imageBank/Icons/updownActive.png') no-repeat;  cursor:pointer;}
+#modalTaskResourceBox {background-color:White; min-height:180px; width:680px; position:relative;}
+#modalTaskResourceBox .modalTaskResourceRow {width:100%; height:30px; cursor:pointer;}
+#modalTaskResourceBox .modalTaskResourceRowAlt {background-color:#F9F9F9;}
+#modalTaskResourceBox .modalTaskResourceRow div {width:225px; height:100%; float:left;}
+#modalTaskResourceBox .modalTaskResourceRow div span {display:block; padding:7px 0px 0px 10px; font-size:8pt;}
+#modalTaskResourceBox .modalTaskResourceRowSelected {background:rgba(255,221,138); background:rgba(255,221,138,0.6);}
+
+#modalSelectResourceResourceBox {width:400px; background-color:White; border:solid 1px #d0d0d0; overflow-x:hidden; overflow-y:scroll; height:550px; margin:12px auto 15px auto;}
+#modalSelectResourceResourceBox .modalSelectResourceRow {border-bottom:solid 1px #d0d0d0; height:25px; width:100%; cursor:pointer;}
+#modalSelectResourceResourceBox .modalSelectResourceRow span {display:block; padding:5px 0px 0px 10px; font-size:8pt;}
+#modalSelectResourceResourceBox .modalSelectResourceRowAlt {background:rgba(255,221,138); background:rgba(255,221,138,0.6);}
+
+.modalTaskAddReminderLink {color:#3B85A8; display:block; padding-left:20px; padding-top:3px; text-decoration:underline; cursor:pointer;}
+.modalTaskReminderGroup div {color:Gray; padding-left:20px; cursor:pointer; padding-top:3px;}
+.modalTaskRemindersSection {width:100%; height:256px; overflow:hidden; display:none;}
+#modalTaskEmptyReminders div {width:100%; height:110px; margin-top:65px; padding-top:40px; padding-left:210px; background:url('/imageBank/schedule/reminderPost.png') no-repeat 100px 0px;}
+#modalTaskEmptyReminders div span {width:200px; display:block;}
+
+#modalTaskReminderTabs {width:187px; height:255px; position:relative; background-color:White; border:solid 1px #d0d0d0; float:left; background: #ffffff url('/imageBank/schedule/shadow_h.png') 183px 0px repeat-y;}
+.modalTaskReminderTab {position:absolute; left:0px;  width:187px; height:55px; border-bottom:solid 1px #d0d0d0; cursor:pointer; }
+.modalTaskReminderTab strong {display:block; padding-left:28px; padding-top:12px; font-size:9pt; font-weight:bold;}
+.modalTaskReminderTabLabel {display:none; padding-left:41px; font-size:9pt; color:Gray; padding-top:1px;}
+.modalTaskReminderTabLink {display:block; margin-left:41px; font-size:9pt; color:#3B85A8; text-decoration:underline; padding-top:1px; width:105px; }
+.modalTaskReminderTabCheck {display:none; position:absolute; top:12px; left:9px; width:13px; height:13px; background:url('/imageBank/schedule/check.png') no-repeat;}
+
+.modalTaskReminderTabSelected {background:#ffffff repeat-x; width:188px;   }
+.modalTaskReminderTabShadowArea {position:absolute; bottom:-5px; left:0px; width:187px; height:4px;}
+.modalTaskReminderTabSelected .modalTaskReminderTabShadowArea {background: url('/imageBank/schedule/shadow_v.png') 0px 0px repeat-x;}
+
+
+#modalTaskReminderTabPlanning {top:0px;}
+#modalTaskReminderTabStarting {top:56px;}
+#modalTaskReminderTabCustom {top:112px;}
+
+.modalTaskNotes {width:674px; height:220px; font-size:8pt; padding:5px 0px 0px 5px; font-family:Sans-Serif; border:solid 1px #d0d0d0; border-bottom:none; outline:none;  overflow-x:hidden; overflow-y:scroll;}
+.modalCorderNotes {width:674px; height:259px; font-size:8pt; padding:5px 0px 0px 5px; font-family:Sans-Serif; border:solid 1px #d0d0d0; border-bottom:none; outline:none;  overflow-x:hidden; overflow-y:scroll;}
+
+
+.modalTaskNotesTab {position:absolute; bottom:0px; height:20px; z-index:0; border:solid 1px #d0d0d0; background-color:#FFFFFF; padding:5px 10px 0px 10px; cursor:pointer;}
+.modalTaskNotesTab_Highlighted {height:22px; border-top:none;}
+#modalTaskNotesTab_Task {left:0px; border-left-width:2px;}
+#modalTaskNotesTab_Field {left:93px;}
+#modalTaskNotesTab_Sub {left:185px;}
+
+.modalGroupNotes {width:411px; height:210px; font-size:8pt; padding:5px 0px 0px 5px; font-family:Sans-Serif; border:solid 1px #d0d0d0; border-bottom:none; outline:none;  overflow-x:hidden; overflow-y:scroll; display:none;}
+
+.modalGroupNotesTab {position:absolute; bottom:0px; height:20px; z-index:0; border:solid 1px #d0d0d0; background-color:#FFFFFF; padding:5px 10px 0px 10px; cursor:pointer;}
+.modalGroupNotesTab_Highlighted {height:22px; border-top:none;}
+#modalGroupNotesTab_Task {left:0px; border-left-width:2px;}
+#modalGroupNotesTab_Field {left:100px;}
+#modalGroupNotesTab_Sub {left:192px;}
+
+
+.modalShiftScheduleUpDown {position:absolute; top:2px; right:2px; width:17px; height:17px;}
+.modalShiftScheduleUpDownInactive {background:url('/imageBank/Icons/updownInactive.png') no-repeat;}
+.modalShiftScheduleUpDownActive {background:url('/imageBank/Icons/updownActive.png') no-repeat;  cursor:pointer; }
+
+.modalShiftScheduleDateBoxHolder {float:right; width:120px; height:100%; position:relative;}
+.modalShiftScheduleDateBoxHolder .ui-datepicker-trigger {position:absolute; top:3px; right:2px; width:16px; height:16px; }
+
+#modalProject { padding: 0em; }
+#modalProject .modalCalEvent_resourceRow span{width:135px;}
+
+.modalHeaderIcon { float: right; margin: 0px -10px 0px 10px; }
+.modalContentHeader .fileIconDiv { float: left; display: block; }
+
+.footerLink { color: white; }
+.upperTabSet { height: 25px; float: right; padding-right: 8px; font-weight: bold; line-height: 24px; font-size: 10pt; }
+.upperTabSet .tab { display: inline-block; text-align: center; }
+
+.outlookTabSet { background-color: White; width: 200px; color: #5a5b5e; font-size: 11pt; font-weight: bold; }
+.outlookTab {position:relative; width: 186px; height: 29px; padding: 0px 0px 0px 12px; line-height: 30px; cursor: hand; cursor: pointer; border-left: solid 1px #959595; border-right: solid 1px #959595; border-top: solid 1px #959595; background-image: url(../imageBank/new_olTab2.jpg); background-position: left; background-repeat: repeat-x; overflow: hidden; }
+.outlookTabBottom { width: 186px; height: 28px; padding: 0px 0px 0px 12px; line-height: 29px; cursor: hand; cursor: pointer; border: solid 1px #959595; background-image: url(../imageBank/new_olTab2.jpg); background-position: left; background-repeat: repeat-x; overflow: hidden; }
+.outlookTabSelected { position:relative; color: #262526; width: 186px; height: 29px; padding: 0px 0px 0px 12px; line-height: 30px; cursor: hand; cursor: pointer; border-left: solid 1px #959595; border-right: solid 1px #959595; border-top: solid 1px #959595; background-image: url(../imageBank/new_olSelTab2.jpg); background-position: left; background-repeat: repeat-x; overflow: hidden; }
+.outlookTabBottomSelected { color: #262526; width: 186px; height: 28px; padding: 0px 0px 0px 12px; line-height: 29px; cursor: hand; cursor: pointer; border: solid 1px #959595; background-image: url(../imageBank/new_olSelTab2.jpg); background-position: left; background-repeat: repeat-x; overflow: hidden; }
+
+.photoCanvas {background-color:#6f6e6e; padding-top: 30px;}
+
+.contentWhite { width: 100%; min-height: 600px; _height: 600px; background-color: white; padding-top:10px; }
+.contentBlack { width: 100%; min-height: 739px; _height: 739px; background-color: #272727; }
+
+.pageTitleBlack {  font-size: 14pt; font-weight: bold; color: #464749; text-decoration: none; width:57%; overflow:hidden; float:left; }
+.pageTitleRight { float: right; font-size: 10pt; font-weight: 800; color: #606060; text-decoration: none; }
+.pageTitleWhite { float: left; font-size: 12pt; font-weight: 800; color: #e0e1e2; text-decoration: none; }
+
+.contentHeader { color: white; font-weight: bold; font-size: 12pt; }
+.contentBackLink { color: white; font-weight: bold; font-size: 10pt; text-align: right; }
+
+.mainContentPersonal { padding: 20px 24px 24px 24px; min-height: 600px; _height: 600px; border: solid 4px white; }
+.promoContent { padding: 20px 24px 24px 24px; min-height: 600px; _height: 600px; border: solid 4px white; display:none; }
+.mainContentPublic { padding: 20px 24px 24px 24px; min-height: 600px; _height: 600px; }
+
+.albumImage { position: relative; float: left; height: 220px; padding-right: 20px; font-size: 10pt; color: #E6E6E6; width: 160px; }
+.albumImageImage { margin-bottom: 4px; }
+.albumImageText { width: 160px; }
+.albumImageSubText { font-size: 8pt; color: gray; }
+
+.uploadButton { width: 16px; height: 16px; background-image: url(/imageBank/uploadImages.gif); background-repeat: no-repeat; background-position: top left; }
+.cs-ui-icon-spinner-check { background-position: -16px -16px; }
+.cs-ui-icon-spinner-cancel { background-position: -16px 0px; }
+.cs-ui-icon-spinner-0 { background-position: 0px 0px; }
+.cs-ui-icon-spinner-36 { background-position: 0px -16px; }
+.cs-ui-icon-spinner-72 { background-position: 0px -32px; }
+.cs-ui-icon-spinner-108 { background-position: -16px -32px; }
+.cs-ui-icon-spinner-144 { background-position: -32px -32px; }
+
+.mainToolbar {  width: 100%; height: 52px; background-position: top left; background-repeat: repeat-x; background-image: url(../imageBank/toolbarBackground52.jpg); background-color: white; border-bottom: solid 1px #A2A2A2; _overflow: hidden; }
+.leftToolbar { padding-left: 20px; padding-top: 14px; float: left; height: 38px; border-left: solid 1px #C0C0C0;}
+.leftToolbar a { display: block; font-size: 8pt; position: relative; height: 25px; width: 40px; margin-right: 2px; overflow: hidden; float: left; text-align: center; }
+
+.rightToolbar { display: none; float: right; height: 36px; color: Gray; font-size: 8pt; font-weight: bold; padding: 16px 32px 0px 0px; border-right: solid 1px #C0C0C0; }
+.leftToolbarText { display: block; float: left; font-weight: bold; color: #333333; padding: 17px 0px 0px 28px; width: 527px; background-color: Blue; }
+.rightToolbarText { display: block; float: right; height: 40px; font-weight: bold; color: #e0e1e2; padding: 16px 24px 0px 0px; border-right: solid 1px #C0C0C0; width: 728px; background-repeat: repeat-x; background-image: url(../imageBank/toolbarBackgroundAlternate52.jpg); background-color: #404040; }
+.rightToolbarText a { color: #e0e1e2; }
+
+.leftToolbarPlaceHolder { display: block; float: left; height: 36px; font-weight: bold; color: #e0e1e2; padding: 14px 16px 0px 12px; border-left: solid 1px #C0C0C0; }
+/*.leftToolbarPlaceHolder a { color: #323232; }*/
+
+.toolbarButton { cursor: pointer; cursor: hand; overflow: hidden; position: absolute; }
+
+.noHotTrack { background-color: white; }
+.hotTrack { background-color: #DFECF5; }
+.listRow { }
+.whiteRows {}
+.hiliteRow { /*background-color: #EFF7FC;*/ background-color:#f3fafe; }
+.hiliteRowWhite { background-color: #F6F6F6; }
+.noliteRowWhite { background-color: white; }
+.hidden { display: none; }
+.block { display: block; }
+
+.navLinks { color: #346e94; }
+.navLinksVeryWhite { text-decoration: none; color: white; }
+.navLinksWhite { text-decoration: none; color: #e0e1e2; }
+.navLinksBlack { text-decoration: none; color: black; }
+.navLinksDark { text-decoration: none; color: #414141; }
+
+.galleryPreview { max-height: 600px; max-width: 800px; color: #e0e1e2; }
+.galleryPreviewText { color: #e0e1e2; font-weight: bold; }
+.galleryPreviewDate { font-size: 8pt; color: #e0e1e2; }
+.galleryThumbnailLeftmost { background-color: #343434; margin-bottom: 8px; }
+.galleryThumbnail { background-color: #343434; margin-bottom: 8px; margin-left: 8px; }
+.selectedThumbnail { border: solid; border-color: #FFFFFF; width: 65px; height: 65px; border-width: 2px; }
+.galleryCommentButton { font-size: 9pt; float: right; margin-top: 8px; margin-left: 6px; }
+
+.filter { float: right; _float: none; height: 20px; line-height: 19px; text-align: center; cursor: pointer; cursor: hand; }
+
+#comments { width: 276px; background-color: #EEEEEE; color: #343434; padding: 12px 12px 12px 12px; overflow: hidden; margin-bottom: 8px; }
+.commentsHeader { display: block; font-size: 11pt; font-weight: bold; margin-bottom: 8px; }
+.commentsContent { display: block;}
+.comment {  display:table; background-color: #FFFFFF; border-bottom: thin solid #EEEEEE; padding: 10px 10px 7px 10px; overflow:hidden; border-spacing:0px;  }
+.commentName {  font-size: 9pt; font-weight: bold; }
+
+.commentText {  font-size: 8pt; display: block; white-space: pre-wrap;  white-space: -moz-pre-wrap !important;  white-space: -pre-wrap;  white-space: -o-pre-wrap;  word-wrap: break-word; }
+.commentCreated { display:block; font-size: 7pt; color: #999999; margin-bottom: 7px; }
+.commentImage {display:table-cell; padding-right:10px;}
+.commentBody { vertical-align:top; display:table-cell; width:100%; overflow:hidden;}
+.commentsEmptyMessage {background-color:#FFFFFF; border: thin solid #EEEEEE; padding:5px; }
+.authored { text-align: left; }
+.txtAddComment {width:200px;  margin-left: -3px; height: 17px; display: block; margin-top: 12px; color: #BBBBBB; padding:6px 20px 2px 5px; overflow:auto; font-family:Arial; font-size:9pt; }
+.txtAddComment.typing { color: Black; }
+.commentsSorting { display: block; margin-bottom: 10px; font-size: 8pt; }
+.commentSubmitButton{background:#FFFFFF url(../imageBank/icons/submit_14x14.png) no-repeat; height:17px; width:17px;  position:absolute; right:2px; top:6px;  cursor:pointer;}
+
+
+.inlineFilesArea td { padding:  12px 0px 12px 0px;  }
+.inlineFilesArea .contentMaintableSubTable { padding: 0px 0px 0px 0px; }
+.inlineFilesArea .contentMaintableSubTable td { padding: 0px; }
+.inlineFilesContainer { display: block; padding: 0px 0px 13px 13px; /*background-color: #E6E6E6;*/}
+
+.inlineCommentsArea td.inlineCommentsAreaTD  { padding: 12px 16px 12px 16px; }
+.inlineCommentsArea .comment{margin-bottom:1px; width:100%; background-color: #FFFFFF;}
+.inlineCommentsArea .commentsSorting { display: block; float: left; margin-top: 15px; }
+.inlineCommentsArea .commentSubmitButton {right:12px; top:14px; z-index:2; }
+.inlineCommentsArea .txtAddComment { height: 19px; margin-top:0px; margin-left:0px; width:98%; margin:0px auto;  padding:2px 0px 0px 5px; }
+.inlineCommentsContainer { display: block; padding:0px 55px 0px 55px; margin:0px auto;  /*background-color: #E6E6E6;*/}
+.inlineCommentsContainer .commentBoxHolder { display:inline-block; width:100%;  margin-top:7px; padding:10px 0px;  background-color:#FFFFFF; position:relative; }
+
+.viewInlineCommentsPre {float: right; }
+.viewInlineComments .commentsIcon, .hideInlineComments .commentsIcon { /*display: block;*/ float: right; margin-right: 4px; }
+.viewInlineComments .commentsLabel, .hideInlineComments .commentsLabel {  /*display: block;*/ float: right;  }
+
+.mdlButtonWrapper { float: right; clear: both; }
+.mdlProcessingWrapper { float: left; clear: none; display: none; padding-top:3px;}
+.modalButton58,.modalButton108,.modalButton128 { cursor: pointer; cursor: hand; color: white; font-size: 9pt; font-weight: bold; text-align: center; float: right; }
+.cancelButton { float: left; clear: none; margin-left: 8px; }
+.submitButton { float: left; clear: none; }
+.processor { margin: 1px 4px 0px 4px; float: right; clear: none; }
+.processorText { height: 18px; line-height: 18px; float: right; clear: none; }
+
+.modal-field-error { background-color: #F44C4F; }
+
+.clickable { cursor: pointer; cursor: hand; }
+
+.showMore { }
+.sortBy { float: right; font-size: 9pt; font-weight: bold; overflow: hidden; }
+.contentMainTable { width: 100%; padding:8px 0px 0px 0px; }
+.contentMainTableCellTable { vertical-align: top; }
+.contentMaintableSubTable {width: 100%; background-color: white;}
+
+.rightSideBarCell { width: 272px; vertical-align: top; }
+.seeAll { width: 100%; height: 36px; line-height: 30px; text-align: right; font-weight: bold; font-size: 10pt; color: #346e94; }
+/*.seeAll a { text-decoration: none; color: #323232; }*/
+.seeAllNoSpace { width: 100%; text-align: right; font-weight: bold; font-size: 9pt; }
+/*.seeAllNoSpace a { text-decoration: none; color: #323232; }*/
+.seeAllWhite { width: 100%; line-height: 30px; color: #e0e1e2; text-align: right; font-weight: bold; font-size: 9pt; }
+.seeAllWhite a { text-decoration: none; color: #e0e1e2; }
+
+.moreButtonBar { background-color: #888888; }
+#moreButtonBar {z-index:2; background-color:White;}
+#moreButtonBarHeader { background-color: #888888; border-bottom: solid 1px white; height: 29px; }
+
+.rightSidebar { display: block; float: right; margin-top: 0px; width: 250px; max-width: 250px; overflow:hidden; }
+.rightSidebarBorderBottom .rightSidebarContent {border-bottom: solid 1px #e7e7e7;}
+.rightSidebarContentDiv { color: Black; padding: 0px 15px 30px 15px; width: 218px; background-color: #FFFFFF; display: none; border: solid 1px #e7e7e7; border-top:none; border-bottom:none; }
+.rightSidebarContent {}
+.rightSidebarDetails { display: block; color: #323232; }
+.rightSidebarLinks { text-decoration: none; font-size: 9pt; color: #323232; }
+.rightSidebarStandardLinks { font-size: 9pt; color: #346e94; }
+.rightSidebarHR { color: #C5CCD3; background-color: #C5CCD3; height: 1px; border-style: none; margin-top: 12px; }
+.rightSidebarHRThin { color: #C5CCD3; background-color: #C5CCD3; height: 1px; border-style: none; }
+.rightSidebarSubLinks { font-weight: bold; font-size: 9pt; color: #346e94; }
+.rightSidebarSubText { font-weight: normal; font-size: 8pt; color: #323232; }
+.rightSidebarText { font-weight: normal; font-size: 9pt; color: #323232; }
+.rightSidebarSubLinksLight { font-size: 8pt; color: #4B4B4B; }
+.rightSidebarSubLinksVeryLight { font-size: 8pt; color: #949598; }
+.rightSidebarToolbar { height: 40px; width: 250px; max-height: 52px; max-width: 250px; overflow: hidden; }
+.rightSidebarButton { float: left; height: 50px; width: 75px; zoom: 1; *display:inline;}
+#rightSidebarComments { padding-bottom: 38px; padding-top: 15px; }
+.rightSidebarPhotoLeft { float: left; clear: both; margin:  10px 10px 0px 10px; }
+.rightSidebarPhotoMiddle { margin: 10px 10px 0px 0px; }
+.rightSidebarPhotoRight { margin: 10px 0px 0px 0px; }
+
+.rsbText { font-size: 9pt; color: #323232; }
+.rsbName { display: block; font-size: 11pt; font-weight: bold; }
+.rsbContactName2 { font-size: 11pt; font-weight: bold; }
+.rsbType { font-size: 9pt; }
+.rsbAddress { display: block; font-size: 9pt; }
+.rsbContactName { display: block; }
+.rsbLog { display: block; margin-top: 20px; font-size: 8pt; }
+.newSection { display: block; padding-top: 20px; font-size: 9pt; }
+.rsbPhone { display: block; font-size: 9pt; }
+.rsbEditLink { display: block; font-weight: bold; text-align: right; width: 220px; padding-top: 6px; margin-top: 18px; }
+.rsbEditLink, .rsbLink { color: #346e94; text-decoration: none; cursor: pointer; cursor: hand; font-size: 9pt; }
+.rsbIcon { float: left; clear: left; margin: 0px 8px 0px 0px; height: 20px; width: 24px; }
+.rightSidebarContent div .leftmost { float: left; clear: both; }
+.rightSidebarContent div .rsbPhoto { margin: 6px 12px 6px 0px; }
+.rsbDetails { display: block; font-size: 9pt; line-height: 20px; }
+.rsbGalleryLightBoard textArea { display:block;}
+.rsbGalleryLightBoard textArea { width:260px;}
+
+#mdlMoveTree { font-weight: bold; margin-bottom: 15px; background-color: White; border: solid 1px #CCCCCC; min-height: 324px; max-height: 324px; height: 324px; min-width: 670px; max-width: 670px; width: 670px; overflow: scroll; }
+#mdlMoveTree .folderTreeRow { clear: left; width: 650px; border-top: 1px solid #9d9d9d; }
+#mdlMoveTree .folderTreeRowSpan { display: block; height: 35px; padding-top:2px;}
+#mdlMoveTree .label { padding-left: 7px; float: left; clear: none; height: 30px; line-height: 30px; }
+#mdlMoveTree .folderTreeRowExpanded .folderTreeRow { display: block; }
+#mdlMoveTree .folderTreeRowCollapsed .folderTreeRow { display: none; }
+#mdlMoveTree .destination { color: white; background-color: #3D80AA; }
+#mdlMoveTree .arrow { margin-top: 8px; float: left; display: block; height: 14px; width: 14px; background-repeat: no-repeat; }
+#mdlMoveTree .folderTreeRowExpanded .arrow { background-position: -256px 0px; }
+#mdlMoveTree .folderTreeRowCollapsed .arrow { background-position: -384px 0px; }
+#mdlMoveTree .folderTreeRowExpanded .destination .arrow { background-position: -320px 0px; }
+#mdlMoveTree .folderTreeRowCollapsed .destination .arrow { background-position: -448px 0px; }
+#mdlMoveTree .folderTreeRowNoChildren .arrow { background-image: none; }
+
+.tableHeader { background-color: #DBE1E7; color: #464749; font-weight: bold; padding: 8px 12px 8px 12px; }
+.projectDetailContact { width: 125px; height: 100px; float: left; padding: 0px 16px 0px 16px; margin: 16px 0px 0px 0px; font-size: 9pt; color: #505050; }
+.projectDetailContactHeader { font-weight: bold; font-size: 11pt; }
+
+.albumImage img.curl { display: none; position: absolute; z-index: 1; top: 0px; left: 120px; }
+
+table.textEntryDetails { width: 100%; border-top: thin solid #cccccc; margin-top: 4px; padding-top: 16px; }
+table.textEntryDetails span.label { font-weight: bold; }
+
+.listViewGridBorder{border-bottom: solid 1px #e7e7e7;}
+.listViewGridBorderTopless { border-bottom: solid 1px #e7e7e7;  }
+.listViewGridBorderLeft { border-bottom: solid 1px #e7e7e7;  }
+.listViewGridBorderRight { border-bottom: solid 1px #e7e7e7;  }
+.listViewGridSideBorder { border-left: solid 1px #9d9d9d; }
+.listViewHeaderRow { background-color: #FFFFFF; color: #58595B; font-size:11pt; font-weight: bold; padding: 8px 12px 8px 12px; border:solid 1px #e7e7e7; border-bottom:none; }
+.listViewHeaderRowLinkable { color: #356E94; font-weight: bold; font-size:11pt; position:relative; padding: 16px 12px 8px 0px; }
+.listViewHeaderRowLinkable a{ color: #356E94; font-weight: bold; font-size:11pt; text-decoration:none;}
+.listViewHeaderRowLinkableHeader { color: #356E94; background-color:#FFFFFF; font-weight: bold; font-size:11pt; position:relative; padding: 8px 12px 8px 12px; border:solid 1px #e7e7e7; border-bottom:none; cursor:pointer; }
+
+.listViewSubHeader { background-color: #DBE1E7; color: #464749; font-weight: normal; font-size: 9pt; }
+.listViewDialogHeaderBorderLeft{border-left: solid 1px #c4c4c4;}
+.listViewDialogHeaderBorderRight{border-right:solid 1px #c4c4c4;}
+.listViewDialogObject{font-size:10pt;color:#464749;}
+.listViewDialogHeaderLink{ color:#346E94; text-decoration:none;}
+
+/*Dialog Transition*/
+.listViewDialogHeader{/*background-color:#FFFFFF;*/ font-size:8pt;}
+.listViewDialogDot{font-size:9pt; font-weight:bolder;}
+.listViewDialogLink{color:#346E94;}
+.listViewDialogLink a{color:#346E94; text-decoration:none;}
+
+.progressBackground { background-image: url(/imageBank/progressBackground.jpg); background-repeat: repeat-x; }
+.progressForeground { background-image: url(/imageBank/progressForeground.jpg); background-repeat: repeat-x; }
+
+.imgLightBox { float: left; }
+ 
+.IE6IB { zoom: 1; *display:inline;}
+
+#mdlManageAdministratorsLabel { padding: 15px 0px 6px 15px; font-weight: bold; font-size: 13px; }
+#mdlManageAdministratorsList { margin-bottom: 15px; font-weight: bold; margin-bottom: 25px; background-color: White; border: solid 1px #CCCCCC; min-height: 200px; max-height: 200px; height: 200px; min-width: 384px; max-width: 384px; width: 384px; overflow: scroll; }
+.mdlCompanyAdministratorsContact { float: left; clear: left; min-width: 346px; max-width: 346px; width: 346px; padding: 10px; border-bottom: 1px solid gray; }
+.mdlCompanyAdministratorsContact input { float: left; margin: 8px; }
+.mdlCompanyAdministratorsContact .blueContact { float: left; margin-top:3px; }
+.mdlCompanyAdministratorsWrapper { float: left; margin-left: 5px; }
+.mdlCompanyAdministratorsContactName { }
+.mdlCompanyAdministratorsContactCompany { font-weight: normal; color: Gray; }
+
+#mdlInviteList { margin-top: 25px; margin-bottom: 15px; font-weight: bold; margin-bottom: 25px; background-color: White; border: solid 1px #CCCCCC; min-height: 271px; max-height: 271px; height: 271px; min-width: 660px; max-width: 660px; width: 660px; overflow: scroll; }
+#mdlInviteLabel1 { font-weight: bold; font-size: 14px; float: left; margin-left: 50px; width:54px; }
+#mdlInviteLabel2 { font-weight: bold; font-size: 14px; float: left; margin-left: 128px; }
+#mdlInviteLabel3 { font-weight: bold; font-size: 14px; float: left; margin-left: 63px; }
+.mdlInviteContact { float: left; clear: left; min-width: 620px; max-width: 620px; width: 620px; padding: 10px; border-bottom: 1px solid gray; }
+.mdlInviteContact input { float: left; margin: 8px; }
+.mdlInviteContact img { float: left; }
+.mdlInviteContact select { margin-top: 4px; float: right; min-width: 274px; max-width: 274px; width: 274px; }
+.mdlInviteWrapper { float: left; margin-left: 5px; width:184px;}
+.mdlInviteContactName { }
+.mdlInviteContactCompany { font-weight: normal; color: Gray; }
+.mdlInviteRelation { float:left; margin-top:7px; } 
+
+#mdlInviteHeaderName { font-weight: bold; }
+#mdlInviteHeaderCompany { font-weight: bold; color: Gray; }
+
+.notRow { border-bottom: solid 1px gray; }
+
+.required { font-size: 16pt; font-weight: bold; color: Red; }
+.mdlProjectPane, .mdlContactPane { position: relative; height: 212px; width: 570px; display: none; }
+.mdlContactContent { padding: 16px 80px 0px 80px; width: 570px;  overflow: visible; }
+.mdlProjectContent { padding: 16px 80px 0px 80px; width: 570px; background-color: #E6E6E6; overflow: visible; }
+.requiredFieldInformation { float: left; height: 21px; font-weight: bold; color: red; font-size: 10pt; }
+.mdlContactLeftFirstColumn { position: absolute; left: 12px; width: 98px; }
+.mdlContactLeftSecondColumn { position: absolute; left: 124px; width: 24px; }
+.mdlContactLeftThirdColumn { position: absolute; left: 162px; width: 98px; }
+.mdlContactLeftFullColumn { position: absolute; left: 12px; width: 248px; }
+.mdlContactRightFirstColumn { position: absolute; left: 300px; width: 116px; }
+.mdlContactRightSecondColumn { position: absolute; left: 432px; width: 116px; }
+.mdlContactRightFullColumn { position: absolute; left: 300px; width: 248px; }
+.mdlContactFirstRow { position: absolute; top: 0px; height: 16px; }
+.mdlContactSecondRow { position: absolute; top: 16px; height: 18px; }
+.mdlContactThirdRow { position: absolute; top: 40px; height: 16px; }
+.mdlContactFourthRow { position: absolute; top: 56px; height: 18px; }
+.mdlContactFifthRow { position: absolute; top: 80px; height: 16px; }
+.mdlContactSixthRow { position: absolute; top: 96px; height: 18px; }
+.mdlContactSeventhRow { position: absolute; top: 120px; height: 16px; }
+.mdlContactEigthRow { position: absolute; top: 136px; height: 18px; }
+.mdlContactNinthRow { position: absolute; top: 160px; height: 16px; }
+.mdlContactTenthRow { position: absolute; top: 176px; height: 18px; }
+.editProfileLink { float: left; height: 21px; font-weight: bold; font-size: 10pt; margin-left: 165px; }
+.mdlNotePane { position: relative; height: 320px; width: 600px; display: none; }
+.mdlNoteContent { padding:  16px 40px 0px 40px; width: 650px; overflow: visible; }
+
+.mdlShareContactList {position:absolute; background-color: white; height:100px; width:378px; overflow-x:hidden; overflow-y:scroll; margin:-8px 0px 0px 1px; border:solid #000000 1px; border-top:none; padding-top:10px;}
+.mdlShareContactRow {width:345px; height:16px; padding:3px 8px 0px 8px; font-size:8pt;}
+.mdlShareContactRow span{float:left; }
+.mdlShareContactRow input{float:right; margin-top:0px}
+.mdlShareContactRowHighlighted {background-color:#4590E1; color:White;}
+.mdlShareWatermark {color:Gray;}
+.mdlShareEmailContactButton {background:#FFFFFF url(../imageBank/icons/contact_card_16px.png) no-repeat; height:18px; width:22px; position:absolute; top:38px; left:393px; cursor:pointer;}
+
+.mdlNotificationCheckRow {width:345px; height:24px; padding:7px 14px 0px 14px; background-color:White; font-size:9pt; border-bottom:solid 1px #58595B; }
+.mdlNotificationCheckRow input{float:right; margin-top:0px;}
+
+.mdlEditFileListBox { background-color: white; height:60px; width:383px; overflow-x:hidden; overflow-y:scroll; margin:0px 0px 18px 1px; border:solid 1px #DBE1E7; }
+.mdlEditFileTagRow {width:350px; height:16px; padding:3px 8px 0px 8px; font-size:8pt;}
+.mdlEditFileTagRow span{float:left; }
+.mdlEditFileTagRow input{float:right; margin-top:0px}
+.mdlEditFileTagRowHighlighted {background-color:#4590E1; color:White;}
+.mdlEditFileWatermark {color:Gray;}
+.mdlEditFileSaveTagButton{position:absolute; right:20px; top:31px; cursor:pointer; }
+
+.inlineTagFiles {color: #346E94; font-size:8pt;   text-decoration:none;}
+.inlineTagDialog {color: #346E94; font-size:8pt; text-decoration:none; }
+
+.galleryTags {color:#E0E1E2; font-size:8pt; font-weight:bold; text-decoration:none;}
+
+.rsbPermissions { border-bottom: solid 1px gray; height: 36px; padding-bottom:5px;padding-top:12px;} 
+.rsbPermissionsImage { float: left; margin-right: 8px; }
+.rsbPermissionsOffsetImage { float: left; margin-top: 6px; margin-right: 8px; }
+.rsbPermissionsWrapper { float: left; margin-left: 4px;}
+.rsbPermissionsName { color: Black; font-size: 9pt; font-weight: bold; text-decoration: none; }
+.rsbPermissionsCompany { color: Gray; font-size: 8pt; font-weight: bold; }
+.rsbPermissionsIcon { margin-top: 6px; margin-left: 1px; float: right; }
+.rsbPermissionsManageLink { font-weight: bold; /*text-decoration: none;*/ text-align:right;display:block;margin-top:6px;color: #346e94;font-size:9pt;}
+
+.assignRoleBox { height: 30px; padding: 4px 66px 0px 66px; border-bottom: solid 1px #e6e6e6; position: relative; }
+.assignRoleBox select { width: 175px; position: absolute; left: 328px; top: 5px; }
+.assignRoleBox label { position: absolute; top: 9px; font-weight: bold; left: 110px; }
+.assignRoleBox div { margin-left: -2px; }
+
+#mdlFeedbackNature { display: block; margin-top: 4px; width: 200px; }
+#mdlFeedbackMessageLbl { display: block; margin-top:8px; }
+
+.rsbTableRow { border-top: solid 1px #9d9d9d; }
+.rsbTableRowbottom { border-top: solid 1px #9d9d9d; border-bottom: solid 1px #9d9d9d; }
+
+.headerUnSelected {font-weight:bold; text-decoration: underline; color:#414141; }
+.headerSelected {font-weight:normal; text-decoration: none; color:#686868; }                 
+
+.divAD {} /*{ width:250px; height: 250px; border: solid 1px #e6e6e6; } */
+
+.imageManScaleArea {background: url(/imageBank/gallery/scale_30x30.png) #272727 no-repeat; width:49%; float:left; }
+.imageManRotateArea {background: url(/imageBank/gallery/rotate_30x30.png) #272727 no-repeat; width:49%; float:left; }
+#imageManWrap span {color:white; }
+#imageManWrap {min-width:800px;}
+
+.deletedMessage{color: Gray; font-size: 10pt; font-weight:bold;}
+
+.productsTable{width:800px; float:left;}
+.productsTableCell {text-align:center; float:left; width:175px; height:300px; color:#505050; padding:0px 12px;}
+.productsTableLink {width:100%; padding-bottom:10px; }
+.productsTableLink a{font-size:11px; font-weight:bold; color:Blue; font-size:11pt; color:#007DDD; text-decoration:none;}
+.productsTableHeader {font-size: 11pt; color:#505050;}
+.productsTablePrice {width:100%; font-weight:bold; color:#47963A; font-size:11pt; padding-bottom:10px; }
+.productsStartingAt {color:#505050;}
+.productsTableText {width:100%; padding-bottom:10px; font-size:9pt;}
+.productsTableRow {float:left; width:100%; padding-bottom:0px; padding-top:10px;}
+
+.editProjectTagBox { height:14px; border:none;  background-color:#D1D7DE; float:left; margin:0px 6px 8px 0px; padding:0px 0px 0px 4px; cursor:pointer; }
+.editProjectTagBox {  font-size:8pt; color:#2D3035;}
+.editProjectTagBoxDelete { height:14px; font-size:8pt; font-weight:bold; float:left; border-left:1px solid #E6E6E6; color:#000000; cursor:pointer;}
+.editProjectTagBoxLabel {float:left; padding-right:4px; }
+.editProjectTagSubmit{width:14px; height:15px; cursor:pointer; position:absolute; top:-33px; left:205px;}
+#editProjectTagNewBox{width:100%; color:gray;  margin-top:0px; margin-bottom:15px;}
+#editProjectTagErrorMessage {color:Red; font-weight:bold; font-size:8pt;}
+
+.dialogImagePreviewPane{position:absolute; z-index:99;  background-repeat:no-repeat; }
+.dialogImagePreviewPaneContentWrap {/*background-color:#323132;*/ background-color:#414041; border:5px; border-bottom:10px; /*border-color:#323132;*/ border-color:#414041; border-style:solid; overflow:hidden; }
+.dialogImagePreviewPaneImage { }
+.dialogImagePreviewPaneFileName {color:#FFFFFF; font-weight:bold; font-size:9pt; padding-top:5px; padding-left:10px;  }
+.dialogImagePreviewPaneProjectName {color:#FFFFFF; font-size:9pt; padding-top:2px; padding-left:10px; padding-bottom:7px;   }
+.dialogImagePreviewPaneGalleryLink {   padding-left:10px;  background-image:url('/imageBank/modal/gallery_view_small.png'); background-repeat:no-repeat; background-position:100px 3px; cursor:pointer; }
+.dialogImagePreviewPaneGalleryLink a {color:#56A2D3; font-size:9pt;  }
+.dialogImagePreviewPaneHiddenOriginalWidth {display:none;}
+
+.simpleModal{display:none;}
+.simpleModalHeader{background-color:#DBE1E7; height:50px; float:left; width:460px; font-size:12pt; color:#464749; font-weight:bold; border-bottom:solid 1px #C8CDD1;  }
+.simpleModalHeader div {float:right;}
+.simpleModalContent{background-color:#EEF2F6; float:left;  width:460px; font-size:9pt;}
+.simpleModalButtonSecondary{background-image:url('/imageBank/modal/simpleModalButtonSecondary2.png'); background-repeat:repeat-x; border:solid 1px #8C939A; height:18px; padding:3px 8px 0px 8px !important; cursor:pointer; color:#464749; font-weight:bold; font-family:Arial; font-size:9pt !important;}
+.simpleModalButtonPrimary{background-image:url('/imageBank/modal/simpleModalButtonPrimary.png'); background-repeat:repeat-x; border:solid 1px #3A5872; height:18px; padding:3px 8px 0px 8px !important; cursor:pointer; color:#FFFFFF; font-weight:bold; font-family:Arial; font-size:9pt !important;}
+.simpleModalButtonDangerous{background-image:url('/imageBank/modal/simpleModalButtonDangerous.png'); background-repeat:repeat-x; border:solid 1px #202020; height:18px; padding:3px 8px 0px 8px; cursor:pointer; color:#FFFFFF; font-weight:bold; font-family:Arial; font-size:9pt;}
+.simpleModalButtonGreenNormal{background-image:url('/imageBank/modal/simpleModalButtonGreenNormal.png'); background-repeat:repeat-x; border:solid 1px #202020; height:18px; padding:3px 8px 0px 8px; cursor:pointer; color:#FFFFFF; font-weight:bold; font-family:Arial; font-size:9pt;}
+.simpleModalButtonGreen{background-image:url('/imageBank/modal/greenButton2.png'); background-repeat:repeat-x; border:solid 1px #22511c; height:18px; padding:3px 8px 0px 8px; cursor:pointer; color:#FFFFFF; font-weight:bold; font-family:Arial; font-size:9pt;}
+.simpleModalButtonRed{background-image:url('/imageBank/modal/redButton2.png'); background-repeat:repeat-x; border:solid 1px #900c1c; height:18px; padding:3px 8px 0px 8px; cursor:pointer; color:#FFFFFF; font-weight:bold; font-family:Arial; font-size:9pt;}
+.simpleModalTab {position:absolute; height:20px; border:solid 1px #d0d0d0; background-color:#EEF2F6; font-weight:bold; font-size:10pt; padding:5px 10px 0px 10px; cursor:pointer; color:#787878;}
+
+.modalTodoAttachRow {float:left; width:100%; border-bottom:solid 1px #d0d0d0; height:29px;}
+.modalTodoAttachment {position:absolute; left:10px; height:29px; width:100%;  }
+.modalTodoAttachment div {position:absolute; font-size:9pt;}
+.modalTodoAttachX {width:13px; height:13px; background:url(/imageBank/grayExit.gif) no-repeat; cursor:pointer; top:6px; right:30px;}
+.modalTodoAttachDL {cursor:pointer; color:#3B85A8; right:63px; top:5px; text-decoration:underline;}
+.modalTodoAttachName {top:5px; left:30px; cursor:pointer;}
+.modalTodoAttachIcon {top:5px; left:5px; cursor:pointer;}
+
+.modalTodoAttachNameIMG {top:5px; left:30px; cursor:pointer;}
+.modalTodoAttachRadio {top:5px; left:10px; padding-top:1px; cursor:pointer;}
+.modalTodoAttachRadio input {margin:0px;}
+.modalTodoAttachDLIMG {cursor:pointer; color:#3B85A8; right:23px; top:5px; text-decoration:underline;}
+
+
+.modalUploadProjectSelectorRow {width:100%; float:left; cursor:pointer; }
+.modalUploadProjectSelectorRowSelected {background-color:#DBE1E7;}
+.modalUploadProjectSelectorLabel {font-size:8pt; float:left; padding-left:5px; }
+.modalUploadProjectSelectorIcon { padding-left:5px; width:12px; background-repeat:no-repeat; float:left; }
+.modalUploadProjectSelectorArrowIcon {padding-left:5px; margin-left:5px; width:6px; background-repeat:no-repeat; background-position:0px 3px; float:left; }
+#modalUploadProjectSelector {width:100%; background-color:#FFFFFF; height:16px; border: solid 1px #8C939A; font-size:8pt; margin-top:5px;  cursor:pointer; overflow:hidden;}
+#modalUploadProjectSelectorPane {width:420px; position:absolute; height:135px; overflow-y:scroll; overflow-x:hidden; background-color:White; padding-top:5px; border: solid 1px #8C939A; border-top:none; }
+
+.modalCalEvent_resourceButton { width: 16px; height: 16px; cursor: pointer; background: url('/imageBank/Icons/contact_card_16px.png') no-repeat;  position:absolute;}
+.modalCalEvent_resourceBox { padding-top:10px; height:100px; position:absolute; top:20px; left:0px; border:solid 1px #d0d0d0; background-color:White;  overflow-y: scroll; overflow-x:hidden; z-index:90;}
+
+.modalCalEvent_resourceRow { cursor: pointer;  padding-bottom:5px; display:inline-block; }
+.modalCalEvent_resourceRow span {display:block; float:left; padding-left:5px; width:330px;}
+.modalCalEvent_resourceRow input {display:block; float:left;  width:20px;}
+
+#modalCalEvent_scheduleStatic span {display:block; padding-bottom:5px; font-size:9pt;}
+
+#mdlUploadFile { background-position:166px 8px; background-repeat:no-repeat;}
+
+.simpleModalUploadPicImage {}
+
+#loggingMainWrapper{width:1100px; margin-top:15px;}
+#loggingMainWrapper .simpleModalButtonPrimary {padding-left:10px; padding-right:12px;}
+#loggingMainCol{ width:800px; float:left; }
+#loggingDayBoxHolder {width:800px; float:left;}
+#loggingMainContainer {border: solid 1px #D0D0D0; width:800px; float:left; overflow:hidden; }
+
+.loggingDayBox {width:109px; height:35px;  background-color:#f2f9fd;  margin-right:3px; float:left; border:1px solid #D0D0D0; border-bottom:none; cursor:pointer;}
+.loggingDayBoxAlt {background-color:#dfecf5;}
+.loggingDayBoxHighlight {background-color:#3b7a9d;}
+.loggingDayBoxHighlight span {color:#FFFFFF;}
+.loggingDayBox div {padding-left:5px;}
+.loggingDayBoxDate {width:100%; font-size:9pt; color:#464749;}
+.loggingDayBoxDay {width:100%;font-size:10pt; color:#000000;}
+
+#loggingFormTabs { width:100%; padding-left:25px; padding-top:15px; border-bottom:solid 1px #D0D0D0;  float:left; }
+.loggingTab {padding:5px 10px 5px 25px; color:#818386; float:left; border:1px solid #D0D0D0; margin-right:3px; border-bottom:none; font-size:11pt; font-weight:bold; cursor:pointer; }
+.loggingTabHighlight {color:White; background-color:#3b7a9d; border-color:#3b7a9d;}
+.loggingTabLabel {}
+#formTabWork{background-image:url(/imageBank/Icons/work_ghost.png); background-repeat:no-repeat; background-position:4px 6px; }
+#formTabVisit{background-image:url(/imageBank/Icons/delivery_ghost.png); background-repeat:no-repeat; background-position:4px 5px;}
+#formTabNote{background-image:url(/imageBank/Icons/notes_ghost.png); background-repeat:no-repeat; background-position:4px 6px;}
+#formTabDelivery{background-image:url(/imageBank/Icons/notes_ghost.png); background-repeat:no-repeat; background-position:4px 6px;}
+#formTabObserved{background-image:url(/imageBank/Icons/notes_ghost.png); background-repeat:no-repeat; background-position:4px 6px;}
+
+
+#loggingFormContainer { width:100%;float:left; }
+/*
+#loggingFormHeader {width:100%; background-color:#f6fafc; font-size:11pt; font-weight:bold; padding:5px 0px 5px 25px; margin-bottom:10px;}
+*/
+.loggingHeader {width:100%;  color:#464749; background-color:#f6fafc; font-size:11pt; font-weight:bold; padding:5px 0px 5px 25px; position:relative; margin-bottom:10px;}
+
+#loggingHeaderEditZip_Link {font-weight:bold; text-decoration:none; color:#346E94; cursor:pointer; font-size:9pt; }
+#loggingHeaderEditZip_Box{ width:40px; }
+#loggingHeaderECWeather {position:absolute; right:30px; top:7px; width:13px; height:13px; cursor:pointer; }
+.loggingHeaderCollapseWeather {background:url(/imageBank/logging/weatherCollapse.png) no-repeat;} 
+.loggingHeaderExpandWeather {background:url(/imageBank/logging/weatherExpand.png) no-repeat;} 
+#loggingFormHeaderAttachLink {width:120px; height:30px; position:absolute; display:none; right:35px; top:5px;  background:url(/imageBank/logging/attach.png) no-repeat 0px 0px; cursor:pointer;} 
+
+.loggingFormAndList { width:750px; padding-left:25px; }
+#loggingFormNotes_Form {overflow:hidden; border-right:solid 1px #D0D0D0; font-size:10pt;}
+#loggingFormVisitLog_Form {overflow:hidden; border:solid 1px #D0D0D0; position:relative; font-size:10pt;}
+#loggingFormDeliveryLog_Form {overflow:hidden; border:solid 1px #D0D0D0; position:relative; font-size:10pt;}
+#loggingFormWorkLog_Form {overflow:hidden; border:solid 1px #D0D0D0; position:relative; font-size:10pt;}
+#loggingFormNotes_List{ margin-top:15px; padding-bottom:20px;}
+#loggingFormVisitLog_List{margin-top:15px; padding-bottom:20px;}
+#loggingFormDeliveryLog_List{margin-top:15px; padding-bottom:20px;}
+#loggingFormWorkLog_List{margin-top:15px; padding-bottom:20px;}
+#loggingWeatherList{margin-top:25px; padding-bottom:20px;}
+#loggingFormVisitLog_Form_ContactBox{}
+
+.loggingFormContactBox{position:absolute; top:50px; left:10px; border:solid 2px #D0d0d0; display:none; background-color:White; width:354px; height:75px; overflow-y:scroll; overflow-x: hidden;}
+.loggingFormModalContactBox {position:absolute; top:21px; left:0px; border:solid 2px #D0d0d0; display:none; background-color:White; width:380px; height:75px; overflow-y:scroll; overflow-x: hidden;}
+.loggingFormContactRow{width:100%; padding-left:10px; cursor:pointer; }
+.loggingFormContactRow:hover{ background-color:#DFECF5; }
+
+.loggingFormNameBox {width: 350px;} 
+.loggingFormNameButton {width:16px; height:16px; position:absolute; background:url(/imageBank/Icons/contact_card_16px.png) no-repeat; cursor:pointer; top:11px; right:15px;}
+.loggingFormNameButtonModal {width:16px; height:16px; position:absolute; background:url(/imageBank/Icons/contact_card_16px.png) no-repeat; cursor:pointer; top:3px; right:20px;}
+
+.loggingListEntry{width:100%;  border:solid 1px #D0D0D0; overflow: hidden; padding-top:10px; margin-top:10px; position:relative; background-color:#F7F7F7; }
+.loggingEntryXButton{background-image:url('/imageBank/HelpBox/gray_x_16x16.gif'); background-repeat:no-repeat; position:absolute; right:0px; top:0px; width:16px; cursor: pointer; }
+.loggingListEntry_Pic{ width:6%; float:left; height:50px; background-repeat:no-repeat; background-position: 10px 5px}
+.loggingListEntry_Content{ width:80%; float:left; color:#1a1818;  }
+.loggingListEntry_Action{ width:9%; float:left; }
+.loggingListEntry_Action a { font-size:9pt; color:Gray;}
+.loggingListEntry_Content_Head{font-weight:bold; font-size:10pt;}
+.loggingListEntry_Content_Head2{font-weight:bold; font-size:11pt;}
+.loggingListEntry_Content_Head3{font-weight:bold; font-size:8pt; color:Gray;}
+.loggingListEntry_Content_Date{font-size:7pt; color:Gray;}
+.loggingListEntry_Content_Text{font-size:9pt; display:block; padding-top:6px;}
+.loggingListEntry_Content_Box{ font-size:8pt; background-color:#FFFFFF; border:solid 1px #D0D0D0; height:18px;  overflow:hidden;}
+.loggingListEntry_Content_Box div{ border-right:solid 1px #D0D0D0; float:left; padding:2px 0px 2px 2px;}
+.loggingListEntry_Content_Box div em{color:Gray; font-style:normal;}
+.loggingCreationDate {width:99%; text-align:right; font-size:7pt; color:gray; float:left;  padding-bottom:5px; }
+.loggingCreationDate strong {display:block; color:#3B85A8; font-weight:normal; cursor:pointer; float:right; padding-right:10px; }
+.loggingCreationDate span {float:right; display:block;}
+
+#loggingCalendarCol{ width: 260px; float:left; margin-left:20px; display:block; background-color:#F6FAFC; overflow:hidden;}
+#loggingCalendarHeader {width: 100%; height:25px; font-weight:bold; font-size:11pt; padding:10px 0px 0px 0px; color:#464749; background-color:#DFECF5;}
+#loggingCalendarMain {  font-size:8pt; width: 190px; float:left;  background-color:White;}
+#loggingActivitySummary {width:100%; padding:10px 0px 45px 10px; float:left; color:#464749; font-size:9pt;}
+#loggingActivitySummary div {border-bottom: solid 1px #D0D0D0; width:215px; cursor:pointer; padding:8px 0px 8px 25px;}
+.loggingCalendarHighlightWeek {background-color:#FCD882;}
+.loggingCalendarHighlightForMonth {background-color:#FCD882;}
+.loggingCalendarAdjustButton {float:left; height: 100px; width:20px; cursor:pointer;}
+.loggingPrev{background: url(/imageBank/logging/prevMonth.jpg) no-repeat; background-position:0px 35px; margin-right:5px; }
+.loggingNext{background: url(/imageBank/logging/nextMonth.jpg) no-repeat; background-position:0px 35px; margin-left:3px;  }
+
+.loggingAttachRow{height: 24px; border-bottom:solid 1px #C8CDD1; width:100%; cursor:pointer; overflow:hidden; }
+.loggingAttachRow div{height:20px; padding-top:3px; float:left; color:#464749;}
+.loggingAttachRowArrow {}
+.loggingDownArrow{width:14px; height:12px;  background:url(/imageBank/arrowDownGray.gif) no-repeat 0px 3px;}
+.loggingRightArrow{width:14px; height:12px; background:url(/imageBank/arrowNextGray.gif) no-repeat 0px 3px;}
+.loggingEmptyArrow{width:14px; height:12px; background:none;}
+.loggingHidden{display:none;}
+
+.loggingAttachFormRow{ position:relative; height:23px; padding:5px 0px 0px 15px; border-bottom:1px solid #D0D0D0; border-left:1px solid #D0D0D0; border-right:1px solid #D0D0D0; font-size:9pt;}
+.loggingAttachFormRowX{width:13px; height:13px; position:absolute; right:20px; top:7px; background:url(/imageBank/grayExit.gif) no-repeat; cursor:pointer;}
+.loggingAttachFormRowMMB{width:13px; height:13px; position:absolute; right:20px; top:5px;  width: 16px; height: 16px; background-image: url(/imageBank/Icons/moreMenu.gif);  cursor:pointer;}
+
+
+#loggingWeatherWraper{float:left; width:100%; margin-bottom:20px; }
+#loggingWeatherIconsHeaders{background-color:#a2a4a7; color: White; height:19px; margin:0px 25px; font-size:10pt; font-weight:bold;  }
+#loggingWeatherIconsGraphics{height:105px; margin:0px 25px; background-color:#4079A6;}
+#loggingWeatherForm{ }
+#loggingWeatherIconsHeaders div{border-right: 2px solid white; padding:2px 0px 2px 5px; float:left; width:19%; }
+#loggingWeatherIconsGraphics div{ overflow:hidden; border-right: 2px solid white; position:relative; padding:2px 0px 2px 5px; background-position:20px 5px; background-repeat:no-repeat;  height:100px; width:19%; color:White; font-weight:bold; font-size:10pt; float:left; background-color:#4079A6; }
+#loggingWeatherIconsGraphics div div{position:absolute; top:80px; text-align:center; height:15px; width:140px; padding:0px; border:none;}
+#loggingWeatherForm_ObservedStatic { font-size:9pt; color:#1A1818; padding:5px 5px 5px 5px; } 
+#loggingWeatherForm_DelayStatic { font-size:11pt; color:#1A1818; padding:5px 5px 5px 5px;  }
+#loggingweatherOverlay{position:absolute; left:270px; width:750px; z-index: 20; height:124px; background:url(/imageBank/logging/weatherOverlay2.png) no-repeat;}
+#loggingweatherOverlay_content {width:750px; position: relative; height:124px;}
+#loggingweatherOverlay_form {position:absolute; top:85px; right:0px; width:308px;}
+
+#loggingFeedbackButton {width:260px; height:117px; float:left; background:url(/imageBank/logging/feedback2.jpg) no-repeat 0px 10px; cursor:pointer; padding-top:10px; background-color: White;}
+
+#calendar_subHeaderText {font-size:14pt; display:block; height:22px; position:absolute; bottom:0px; left:0px;  font-weight:bold; color:#464749;  }
+
+.info_popover{width:265px; position:absolute; z-index:1005; }
+#info_popoverTall {background-image:url('/imageBank/modal/taller_popover.png');}
+#info_popoverShort {background-image:url('/imageBank/modal/shorter_popover.png');}
+.info_popoverWrapper {width:265px; background-repeat:no-repeat; background-position:0px 0px; }
+.info_popoverContent {width:265px; padding:5px 5px 0px 5px; }
+.info_popoverX{width:13px; height:13px; position:absolute; top:5px; right:5px; background:url('/imageBank/grayExitNew.png') no-repeat; cursor:pointer;}
+.info_popoverTitle {font-weight:bold; font-size:10pt; display:block; height:20px; overflow:hidden; width: 250px; color:#464749;}
+.info_popoverText {font-size:9pt; display:block; padding-top:0px; width:240px; color:#464749;}
+.info_popoverIcon {position:absolute; background:url('/imageBank/Icons/info.png') no-repeat 0px 0px; width:13px; height:13px; cursor:pointer; }
+
+#calendar_weekOverlay {width:100%; position:absolute; left:0px; border:solid 3px gray; z-index:1;}
+.calendar_hiddenEvent {display:none;}
+.calendar_overlayLink {font-size:8pt; display:block; position:absolute; bottom:5px; right:5px; color:#007DDD; font-weight:bold; cursor:pointer; }
+
+#calendar_popover {width:255px; height:160px;  position:absolute; z-index:5; }
+#calendar_popoverWrapper {width:255px; height:160px;  background: url('/imageBank/calendar/revised_popover.png') no-repeat 0px 0px; }
+#calendar_popoverContent{width:255px; height:100px; padding:8px 8px 0px 8px; }
+#calendar_popoverX{width:13px; height:13px; position:absolute; top:5px; right:5px; background:url('/imageBank/grayExitNew.png') no-repeat; cursor:pointer;}
+.calendar_popH{font-weight:bold; font-size:11pt; display:block; padding-top:0px; width:230px; height:18px; overflow:hidden;}
+.calendar_popDate{color: gray; font-size:8pt; display:block; padding-top:0px; width:230px; height:14px; overflow:hidden;}
+.calendar_popResources{color: gray; font-size:8pt; display:block; padding-top:0px; width:230px; height:14px; overflow:hidden;}
+.calendar_popDescription{ font-size:8pt; display:block; padding-top:0px; width:230px; height:27px; overflow:hidden;}
+.calendar_popLink { font-size:8pt; color:#007DDD; font-weight:bold; display:block; width:230px; padding-top:8px; height:20px; text-align:right; background: url('/imageBank/calendar/edit.png') no-repeat 160px 9px; cursor:pointer; }
+
+#calendar_Tpopover {width:255px; height:191px;  position:absolute; z-index:5; }
+#calendar_TpopoverWrapper {width:255px; height:191px;  background: url('/imageBank/calendar/taller_popover.png') no-repeat 0px 0px; }
+#calendar_TpopoverContent{width:255px; height:146px; padding:5px 5px 0px 15px; }
+#calendar_TpopoverX{width:13px; height:13px; position:absolute; top:5px; right:5px; background:url('/imageBank/grayExitNew.png') no-repeat; cursor:pointer;}
+.calendar_TpopDate {color: Gray; font-size:8pt; }
+.calendar_TpopH{font-weight:bold; font-size:10pt; display:block; padding-top:0px; width:230px; height:20px; overflow:hidden;}
+.calendar_TpopLink { font-size:8pt; color:#007DDD; font-weight:bold; display:block; width:70px; padding-top:21px;   float:left; cursor:pointer; }
+
+
+
+
+.calendarDV_boxHeader { width:99%; background-color:#F6FAFC; border:solid 1px #d0d0d0; border-bottom:none; padding-top:3px; padding-bottom:3px;}
+.calendarDV_boxHeader span{color:#464749; font-size:11pt; font-weight:bold; display:block; padding-left: 15px;}
+
+
+#calendarDV_calWrapper {width:99%; position:relative; display:inline-block;  border: 1px solid #D0D0D0; height:540px;  overflow:hidden;}
+.calendarDV_halfHourRow {width:100%; float:left;  border-bottom: 1px solid #D0D0D0; }
+.calendarDV_halfHourRow span{color:#808080; font-size:8pt; display:block; padding-left:5px; padding-top:3px; }
+.calendarDV_halfHourRowAlt { background-color:#fffff6;}
+.calendarDV_halfHourRowMiddle {border-bottom: #D0D0D0 1px dotted; }
+.calendarDV_halfHourRowHighlight {background-color:#ffdd8a;}
+
+.calendarDV_eventBox {position:absolute; background-color:#dfecf5;  border:solid 1px #bbc9d2; overflow:hidden; color:#616e77; cursor:pointer;}
+.calendarDV_eventBox span {font-size:8pt; display:block; padding-left:5px; padding-top: 3px;}
+.calendarDV_eventBox strong {font-size:9pt; display:block; padding-left:5px; padding-top:2px;}
+
+#calendarDV_calAllDayWrapper {width:99%; position:relative; display:inline-block;  border: 1px solid #D0D0D0; min-height:110px; margin-bottom:20px; padding-bottom:7px; overflow:hidden;}
+.calendarDV_allDayEvent {background: url('/imageBank/Icons/cal2.png') no-repeat 20px 4px; width: 100%; padding:5px 0px 2px 40px; font-size:9pt; cursor:pointer;  }
+.calendarDV_allDayEventHighlight {color: #464749; background-color:#ffdd8a;}
+
+#calendarDV_addAllDayLink {font-size:9pt; cursor:pointer; color:#346E94; font-weight:bold; }
+
+.calendarDV_scrollButton {width:49%; height:23px; display:block; float:left; background:url('/imageBank/calendar/scrollBackground.png') repeat-x; }
+#calendarDV_sup {float:right;}
+#calendarDV_sdown{}
+
+
+
+#calendarWV_weekWrap{width:99%; float:left; display:inline-block; position:relative; border:solid 1px #d0d0d0; }
+#calendarWV_weekButtonWrap{width:100%; float:left; height:37px;  overflow:hidden; border-bottom:solid 1px #d0d0d0; background-color:#DFECF5;}
+#calendarWV_weekDateWrap{width: 100%; position:relative; float:left; height:170px;  }
+.calendarWV_dateBox {width:14.2%; height:170px; position:absolute; top:0px; cursor:pointer;  }
+.calendarWV_dateBoxLast {width:14.8%;}
+.calendarWV_dateBoxHighlight {background-color:#ffdd8a;}
+.calendarWV_dateBox span {display:block; width:93%; text-align:right; padding-top:5px; font-size:11pt; font-weight:bold; color:Gray;}
+.calendarWV_dayBox {width:14.2%; position:absolute; top:0px; height:37px; cursor:pointer; overflow:hidden; background-color:#f2f9fd; }
+.calendarWV_dayBoxLast {width:14.8%;}
+.calendarWV_dayBoxAlt {background-color:#dfecf5;} 
+.calendarWV_dayBoxHighlight {background-color:#3b7a9d; }
+.calendarWV_dayBoxHighlight em{ color:White; font-weight:bold;}
+.calendarWV_dayBoxHighlight span{ color:White; font-weight:bold;}
+.calendarWV_dayBoxUnHighlight em{ color:#464749; font-weight:normal;}
+.calendarWV_dayBoxUnHighlight span{ color:black; font-weight:normal;}
+.calendarWV_dayBox em {font-style:normal; font-size:9pt; padding:1px 0px 0px 5px;  display:block; width: 95%;}
+.calendarWV_dayBox span {font-style:normal; font-size:10pt;  padding:0px 0px 0px 5px; display:block; width: 95%;}
+#calendarWV_gridWrap {width:99%; position:relative; display:inline-block; border:1px solid #d0d0d0; border-top:none; height:546px; overflow:hidden;}
+#calendarWV_gridWrapInner {width:100%; position:relative; display:inline-block; height:100%;}
+.calendarWV_halfHourRow {width:100%; float:left;   border-bottom: 1px solid #D0D0D0; position:relative; }
+.calendarWV_halfHourRow span{position:absolute; top:0px; color:#808080; font-size:8pt; height:20px; width:14.2%; display:block; padding-top:3px; }
+.calendarWV_halfHourRow_spanLast{width:14.8%;}
+
+.calendarWV_halfHourRowAlt { background-color:#fffff6;}
+.calendarWV_halfHourRowMiddle {border-bottom: #D0D0D0 1px dotted; }
+.calendarWV_halfHourRowHighlight {background-color:#ffdd8a;}
+
+.calendarWV_eventBox {position:absolute; background-color:#dfecf5;  border:solid 1px #bbc9d2; border-left:none; text-overflow: ellipsis; white-space:nowrap; overflow:hidden; color:#616e77; cursor:pointer;}
+.calendarWV_eventBox span {font-size:8pt; display:block; padding-left:5px; padding-top: 3px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden;}
+.calendarWV_eventBox strong {font-size:9pt; display:block; padding-left:5px; padding-top:2px; white-space:nowrap; text-overflow: ellipsis; overflow:hidden;}
+
+.calendarWV_allDayEvent {position:absolute; background-color:#dfecf5;  border:solid 1px #bbc9d2; border-left:none; overflow:hidden;  color:#616e77; cursor:pointer; height:15px; font-size:8pt; text-overflow: ellipsis; white-space:nowrap;  }
+
+.calendarWV_allDayEventHighlight .calendar_allDayEventArrowRight {background-color:#ffdd8a;}
+.calendarWV_allDayEventHighlight .calendar_allDayEventArrowLeft {background-color:#ffdd8a;}
+.calendarWV_allDayEventRel span {text-overflow: ellipsis; white-space:nowrap;}
+.calendarWV_allDayEventRel {position:relative; width:100%; height:15px;  border-left:solid 1px #bbc9d2; text-overflow: ellipsis; overflow:hidden; white-space:nowrap;}
+.calendar_allDayEventArrowRight {position:absolute; top:2px; right:-1px; width:15px; height:15px; background:url('/imageBank/calendar/right_arrow.png') no-repeat 3px 0px; background-color:#dfecf5;} 
+.calendar_allDayEventArrowLeft {position:absolute; top:2px;  width:15px; height:15px; background:url('/imageBank/calendar/left_arrow.png') no-repeat 3px 0px; background-color:#dfecf5;} 
+.calendar_allDayEventScheduleIcon {position:absolute; left:-1px; top:0px; width:18px; height:17px; background: url('/imageBank/calendar/schTask.png') no-repeat; }
+
+.calendarWV_scrollButton {width:49%; height:23px; display:block; float:left; background:url('/imageBank/calendar/scrollBackground.png') repeat-x; }
+#calendarWV_sup { float:right;  }
+#calendarWV_sdown{}
+.calendarScrollArrow {display:block; width:100%; height:23px;}
+.calendarScrollArrow_up { background:url('/imageBank/calendar/scrollUpArrow.png') no-repeat center;}
+.calendarScrollArrow_down { background:url('/imageBank/calendar/scrollDownArrow.png') no-repeat center;}
+
+#calendarMV_weekWrap{width:99%; display:inline-block; position:relative; height:855px; background-color:#F6FAFC; border:solid 1px #d0d0d0; border-top:none; border-bottom:none;  }
+#calendarMV_dayWrap{ width:99%; display:inline-block; height:25px; white-space:nowrap; position:relative; top:0px; left:0px; border:solid 1px #d0d0d0; overflow:hidden; background-color:#DFECF5; }
+.calendarMV_dayBox{ width:14.2%; height:25px; top:0px; overflow:hidden; background-color:#dfecf5; color:Black; position:absolute;}
+.calendarMV_dayBoxLast {width:14.8%;}
+.calendarMV_dayBoxAlt {background-color:#f2f9fd;}
+.calendarMV_dayBox span {display:block; padding:3px 0px 0px 5px;}
+.calendarMV_weekDateWrap{width: 100%; position:absolute; left:0px; height:170px;  border-top:none; border-bottom:solid 1px #d0d0d0;}
+.calendarMV_dateBox {width:14.2%; height:170px;  top:0px; cursor:pointer; color:Gray; background-color:#FFFFFF; position:absolute;}
+.calendarMV_dateBoxLast {width:14.8%;}
+
+.calendarMV_dateBoxLabel {display:block; width:93%; text-align:right; padding-top:5px; font-size:11pt; font-weight:bold; }
+.calendarMV_dateBoxOtherMonth {color: #D0D0D0;}
+.calendarMV_dateBoxWeekend {background-color:#f6fafc;}
+.calendarMV_dateBoxHighlight {background-color:#ffdd8a;}
+
+.calendarMV_allDayEvent {position:absolute; background-color:#dfecf5;  border:solid 1px #bbc9d2; border-left:none; overflow:hidden;  color:#616e77; cursor:pointer; height:15px; font-size:8pt; text-overflow: ellipsis; white-space:nowrap;  }
+
+
+.calendarMV_allDayEventRel span {text-overflow: ellipsis; white-space:nowrap; }
+.calendarMV_allDayEventRel {position:relative; border-left:solid 1px #bbc9d2; width:100%; height:15px;  text-overflow: ellipsis; overflow:hidden; white-space:nowrap;}
+
+.calendarMV_singleEventBox{position:absolute; height:30px;  cursor:pointer; width:13%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.calendarMV_singleEventBox strong {font-size:8pt; display:block; height:14px; color:#3B85A8; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.calendarMV_singleEventBox span {font-size:8pt; display:block; height:14px; color:Gray;}
+.calendarMV_singleEventBoxHighlight {}
+
+.calendarMV_singleEventBox_color {float:left; width:5px; height:22px; border-style:solid; border-width:1px; margin-top:2px;}
+.calendarMV_singleEventBox_body {float:left; padding-left:4px; width:89%; }
+
+.calendarMV_innerBoxBorder {position:absolute; width:100%; height:100%; border-left:solid 1px #d0d0d0; top:0px; left:0px;}
+
+
+.calendarSidebar_filterCheckColor_0 {background-color:#88A9E0; border-color:#6884B4;} 
+.calendarSidebar_filterCheckColor_0 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_0 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_0 .calendarMV_innerBoxBorder{border-color:#6884B4;}
+.calendarSidebar_filterCheckColor_0 .calendar_allDayEventArrowRight {background-color:#88A9E0;}
+.calendarSidebar_filterCheckColor_0 .calendar_allDayEventArrowLeft {background-color:#88A9E0;}
+.calendarSidebar_filterCheckColor_1 {background-color:#D1EB7A; border-color:#93B22A;} 
+.calendarSidebar_filterCheckColor_1 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_1 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_1 .calendarMV_innerBoxBorder{border-color:#93B22A;}
+.calendarSidebar_filterCheckColor_1 .calendar_allDayEventArrowRight {background-color:#D1EB7A;}
+.calendarSidebar_filterCheckColor_1 .calendar_allDayEventArrowLeft {background-color:#D1EB7A;}
+.calendarSidebar_filterCheckColor_2 {background-color:#FEE978; border-color:#E9C637;} 
+.calendarSidebar_filterCheckColor_2 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_2 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_2 .calendarMV_innerBoxBorder{border-color:#E9C637;}
+.calendarSidebar_filterCheckColor_2 .calendar_allDayEventArrowRight {background-color:#FEE978;}
+.calendarSidebar_filterCheckColor_2 .calendar_allDayEventArrowLeft {background-color:#FEE978;}
+.calendarSidebar_filterCheckColor_3 {background-color:#F9886F; border-color:#EE5B3B;} 
+.calendarSidebar_filterCheckColor_3 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_3 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_3 .calendarMV_innerBoxBorder{border-color:#EE5B3B;}
+.calendarSidebar_filterCheckColor_3 .calendar_allDayEventArrowRight {background-color:#F9886F;}
+.calendarSidebar_filterCheckColor_3 .calendar_allDayEventArrowLeft {background-color:#F9886F;}
+.calendarSidebar_filterCheckColor_4 {background-color:#E6B4D4; border-color:#D784B9;} 
+.calendarSidebar_filterCheckColor_4 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_4 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_4 .calendarMV_innerBoxBorder{border-color:#D784B9;}
+.calendarSidebar_filterCheckColor_4 .calendar_allDayEventArrowRight {background-color:#E6B4D4;}
+.calendarSidebar_filterCheckColor_4 .calendar_allDayEventArrowLeft {background-color:#E6B4D4;}
+.calendarSidebar_filterCheckColor_5 {background-color:#D4D5D7; border-color:#97999C;} 
+.calendarSidebar_filterCheckColor_5 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_5 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_5 .calendarMV_innerBoxBorder{border-color:#97999C;}
+.calendarSidebar_filterCheckColor_5 .calendar_allDayEventArrowRight {background-color:#D4D5D7;}
+.calendarSidebar_filterCheckColor_5 .calendar_allDayEventArrowLeft {background-color:#D4D5D7;}
+.calendarSidebar_filterCheckColor_6 {background-color:#DFECF5; border-color:#A4B5C0;} 
+.calendarSidebar_filterCheckColor_6 .calendarMV_allDayEventRel, .calendarSidebar_filterCheckColor_6 .calendarWV_allDayEventRel, .calendarSidebar_filterCheckColor_6 .calendarMV_innerBoxBorder{border-color:#A4B5C0;}
+.calendarSidebar_filterCheckColor_6 .calendar_allDayEventArrowRight {background-color:#DFECF5;}
+.calendarSidebar_filterCheckColor_6 .calendar_allDayEventArrowLeft {background-color:#DFECF5;}
+
+.calendarMV_allDayEventHighlight {color: #464749; background-color:#ffdd8a; border-color:#f7c13e;}
+.calendarMV_allDayEventHighlight .calendarMV_allDayEventRel {border-color:#f7c13e;}
+.calendarWV_allDayEventHighlight {color: #464749; background-color:#ffdd8a; border-color:#f7c13e;}
+.calendarWV_allDayEventHighlight .calendarWV_allDayEventRel {border-color:#f7c13e;}
+.calendarWV_eventBoxHighlight {color: #464749; background-color:#ffdd8a; border-color:#f7c13e;}
+.calendarWV_eventBoxHighlight .calendarMV_innerBoxBorder {border-color:#f7c13e;}
+.calendarDV_eventBoxHighlight {color: #464749; background-color:#ffdd8a; border-color:#f7c13e;}
+.calendarMV_allDayEventHighlight .calendar_allDayEventArrowRight {background-color:#ffdd8a;}
+.calendarMV_allDayEventHighlight .calendar_allDayEventArrowLeft {background-color:#ffdd8a;}
+.calendarWV_allDayEventHighlight .calendar_allDayEventArrowRight {background-color:#ffdd8a;}
+.calendarWV_allDayEventHighlight .calendar_allDayEventArrowLeft {background-color:#ffdd8a;}
+.calendarMV_singleEventBoxHighlight .calendarMV_singleEventBox_color {background-color:#ffdd8a; border-color:#f7c13e;}
+
+.calendarSidebar_Selectors {float:left; display:inline-block; width:260px; padding-top:10px;}
+.calendarSidebar_checkList span {display:block; height:15px; width:240px; padding:10px 0px 3px 10px; float:left; color:#464749; font-size:9pt; }
+.calendarSidebar_select {float:left; width:240px; display:block; margin-left:10px; margin-bottom:10px; font-size:9pt;}
+
+.calendarSidebar_example {margin-bottom:15px;}
+.calendarSidebar_checkList {padding-left:12px; display:inline-block; width:248px;}
+.calendarSidebar_filterCheck {width:100%; height:25px; overflow:hidden;}
+.calendarSidebar_filterCheckHolder {float:left; display:inline-block; border-style:solid; border-width:1px; padding:0px; }
+.calendarSidebar_filterCheckBox {margin:2px; padding:0px;}
+.calendarSidebar_checkLink {font-size:7pt; padding:0px; text-decoration:underline; color:#3B85A8; display:block; float:left; width:60px; cursor:pointer;}
+
+#calendarSidebar_emptyProjects { background: url('/imageBank/calendar/emptyProjectList.png') no-repeat 43px 10px; height:190px; width:200px; padding-top:110px; cursor:pointer; }
+#calendarSidebar_emptyProjects span{ text-align:center; display:block;  color: Gray; font-size:9pt;}
+
+.calendarSidebar_filterCheckLabel {float:left; padding-left:10px; padding-top:2px; overflow:hidden;  width:210px; }
+.calendarSidebar_filterCheckLabel label {width:180px; float:left; display:block; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+.calendarSidebar_filterCheckLabel span{width:15px; float:left; display:block; padding:0px; font-size:7pt; color:#3B85A8; text-decoration:underline; cursor:pointer;}
+
+#mdlCalPrefsCheckHolder {width:397px; height:290px; overflow-y:scroll; overflow-x:hidden; background-color:White; border:solid 1px #C8CDD1; padding:7px 0px 7px 7px; }
+.mdlCalPrefs_filterCheck {width:100%; height:25px; overflow:hidden;}
+.mdlCalPrefs_filterCheckHolder {float:left; display:inline-block; border-style:solid; border-width:1px; padding:0px;}
+.mdlCalPrefs_filterCheckBox {margin:2px; padding:0px;}
+.mdlCalPrefs_filterCheckLabel {float:left; padding-left:10px; padding-top:2px; overflow:hidden;  width:350px; }
+.mdlCalPrefs_filterCheckLabel label {width:320px; float:left; display:block; overflow:hidden; white-space:nowrap; text-overflow: ellipsis;}
+.mdlCalPrefs_filterCheckLabel span{width:15px; float:left; display:block; padding:0px; font-size:7pt; color:#3B85A8; text-decoration:underline; cursor:pointer;}
+.mdlCalPrefs_checkLink {font-size:7pt; padding:0px; text-decoration:underline; color:#3B85A8; display:block; float:left; width:60px; cursor:pointer;}
+
+
+#calendarSidebar_prjChecks {height:300px; width: 236px; margin-bottom:15px; padding:5px 0px 5px 5px; overflow-x:hidden; overflow-y:scroll; background-color:White; }
+#calendarSidebar_prjChecks .calendarSidebar_filterCheck {width:250px;}
+
+.calendarSidebar_scheduleCheckHolder {font-size:9pt; color:Gray; padding-left:30px; padding-bottom:5px;}
+.calendarSidebar_scheduleCheck {}
+.calendarSidebar_scheduleCheck input {}
+
+#calendarSidebar_viewBox {float:left; margin-left:20px; height:30px; width:260px;}
+.calendarSidebar_view {float:left; width:85px; height:30px; background-repeat:no-repeat; cursor:pointer;}
+.calendarSidebar_dayView {background-image:url('/imageBank/calendar/day.png');}
+.calendarSidebar_dayView_s {background-image:url('/imageBank/calendar/day_s.png');}
+.calendarSidebar_weekView {background-image:url('/imageBank/calendar/week.png');}
+.calendarSidebar_weekView_s {background-image:url('/imageBank/calendar/week_s.png');}
+.calendarSidebar_monthView {background-image:url('/imageBank/calendar/month.png');}
+.calendarSidebar_monthView_s {background-image:url('/imageBank/calendar/month_s.png');}
+
+/*#todoList_table {width:1100px;}
+.todoList_headerRow {float:left; width:1100px; border-bottom:#464749 solid 2px;}
+.todoList_headerCell {background-color:#DBE1E7;  float:left; height:35px; border-right: #FFFFFF solid 1px;}*/
+.todoList_link {color:#3B85A8; display:block; float:right; cursor:pointer; background-position:0px 0px; font-weight:bold; font-size:10pt; text-decoration:underline; background-repeat:no-repeat; padding-left:20px; }
+#todoList_table {width:1100px; }
+#todoList_completeTable {width:1100px; }
+.todoList_headerRow { width:1100px; border-bottom:#464749 solid 2px;}
+.todoList_headerCell {background-color:#DBE1E7; position:relative;  height:35px; border-right: #FFFFFF solid 1px; border-bottom:solid 2px #D0D0D0; cursor:pointer;}
+.todoList_headerCell_sortUp{background-image:url('/imageBank/Icons/uparrow.png'); background-repeat:no-repeat; background-position:right;}
+.todoList_headerCell_sortDown{background-image:url('/imageBank/Icons/downarrow.png'); background-repeat:no-repeat; background-position:right;}
+
+.todoList_headerCell span { display:block; padding-left:15px;   color:#464749; font-size:10pt; font-weight:bold;}
+.todoList_row { width:1100px; border-bottom:#464749 solid 2px; cursor:pointer;}
+.todoList_cell { height:35px; border-right:solid 1px #D0D0D0; vertical-align:top; padding:none; color:#464749; margin:none; border-bottom:solid 1px #D0D0D0; border-top:none; border-left:none;}
+.todoList_cellHighlight{ background-color:#DFECF5; }
+.todoList_cell span { display:block; padding-left:15px; padding-top:10px; padding-bottom:10px; padding-right:5px;  font-size:9pt; }
+.todoList_overdue {color:#8C1E17;}
+.todoList_checkCell {}
+.todoList_check { margin:0; padding:0; }
+.todoList_checkHolder { padding:11px 0px 0px 11px;}
+.todoList_dateEm {color:Gray; font-size:8pt;}
+.todoList_attachButton {cursor:pointer;  padding-left:2px; height:17px; color:#3B85A8; font-weight:bold; text-decoration:underline; }
+.todoList_attachCount {  height:17px; background: url('/imageBank/logging/attach.png') no-repeat 15px 10px;}
+
+.todoList_footerLink { display:block; padding-left:15px; padding-top:3px; float:left; height:20px; cursor:pointer; color:#3B85A8; font-weight:bold; font-size:9pt; text-decoration:underline;}
+.todoList_footer {border:solid 1px #D0D0D0; border-top:none; padding:5px 0px 5px 15px; background-color:#f2f9fd;}
+#todoList_footerButtons {float:left; width:155px; padding-top:6px;}
+.todoList_footer #todoList_footerButtons .simpleModalButtonPrimary {float:left;  }
+.todoList_footer #todoList_footerButtons .simpleModalButtonSecondary {float:left; margin-left:10px; }
+#todoList_footerTextBox {float:left; width:380px; margin-right:10px;}
+#todoList_footerProject {float:left; width:300px; margin-top:2px; margin-right:20px; margin-left:5px; }
+#todoList_footerDate {float:left; width:80px; margin-left:5px; margin-right:8px; }
+#todoList_footerExtra {float:left; padding-top:5px;}
+#todoList_footerExtra .todoList_footerLab  {float:left; display:block; font-size:8pt; font-weight:bold; color:#464749; padding-top:5px;}
+
+.proStrip {width:740px; height:26px; position:absolute; top:130px; right:15px;  }
+.proStrip_button {float:left; height:26px; cursor:pointer;}
+.proStrip_button span { font-size:10pt; font-weight:bold; display:block; padding-top:4px; }
+.proStrip_leftButton {width:122px;  background:url('/imageBank/protab/farLeftShort.png') no-repeat;}
+.proStrip_leftButton_s {background-image:url('/imageBank/protab/farLeftShort_s.png'); color:White;}
+.proStrip_middleButtonA {width:122px; background:url('/imageBank/protab/middleAShort.png') no-repeat;}
+.proStrip_middleButtonA_s {background-image:url('/imageBank/protab/middleAShort_s.png'); color:White;}
+.proStrip_middleButtonB {width:122px; background:url('/imageBank/protab/middleBShort.png') no-repeat;}
+.proStrip_middleButtonB_s {background-image:url('/imageBank/protab/middleBShort_s.png'); color:White;}
+.proStrip_middleButtonC {width:122px; background:url('/imageBank/protab/middleBShort.png') no-repeat;}
+.proStrip_middleButtonC_s {background-image:url('/imageBank/protab/middleBShort_s.png'); color:White;}
+.proStrip_middleButtonD {width:122px; background:url('/imageBank/protab/middleBShort.png') no-repeat;}
+.proStrip_middleButtonD_s {background-image:url('/imageBank/protab/middleBShort_s.png'); color:White;}
+.proStrip_rightButton {width:122px; background:url('/imageBank/protab/farRightShort.png') no-repeat;}
+.proStrip_rightButton_s {background-image:url('/imageBank/protab/farRightShort_s.png'); color:White;}
+
+#modalComingSoonImage {cursor:pointer;}
+
+.boldDropDownOption {font-weight:bold;}
+
+#calendarSidebar_leftRightToday {width:107px; height:30px; float:right; position:relative; cursor:pointer; }
+.lrt_leftArrow {width:31px; float:left; height:30px; background:url('/imageBank/calendar/lrt_left.png') no-repeat; }
+.lrt_rightArrow {width:31px; float:left; height:30px; background:url('/imageBank/calendar/lrt_right.png') no-repeat; }
+.lrt_todayBox {width:45px; float:left; height:30px; background:url('/imageBank/calendar/lrt_today.png') no-repeat; }
+.lrt_todayText {display:block; color:#464749; font-weight:bold; font-size:9pt; padding-top:7px; padding-left:5px; }
+.lrt_todayTextDisabled {color:Gray; font-weight:normal;}
+
+#scheduling_listWrapper {width:900px; display:inline-block;}
+#scheduling_scheduleList { width:612px; margin-top:30px;  display:inline-block; float:left; border-top:solid 1px gray;}
+.scheduling_scheduleListItems {width:100%; display:inline-block; }
+
+#scheduling_mainTabs { height:30px; width:380px; position:absolute; top:19px; left:10px; }
+.scheduling_tab {width:125px; height:30px; border:solid 1px #d0d0d0; border-bottom:none; position:absolute; top:0px; z-index:5; cursor:pointer; }
+.scheduling_tab div {width:16px; height:16px; position:absolute; top:7px; }
+.scheduling_tab span {display:block; font-weight:bold; position:absolute;  top:7px;}
+
+.scheduling_tabInactive span {color:Gray;}
+.scheduling_tabActive span {color:white;}
+.scheduling_tabActive {background-color:#4280a4; border-color:#4280a4;}
+
+.scheduling_ganttTab {left: 140px;}
+.scheduling_ganttTab div {left:15px; top:7px;}
+.scheduling_ganttTab span {left:37px; top:7px; }
+.scheduling_ganttTabInactive div {background: url('/imageBank/schedule/chartGray.png') no-repeat;}
+.scheduling_ganttTabActive div {background: url('/imageBank/schedule/chartWhite.png') no-repeat;}
+
+.scheduling_listTab {left:0px;}
+.scheduling_listTab div {left:15px; }
+.scheduling_listTab span {left:37px; top:7px;}
+.scheduling_listTabInactive div {background: url('/imageBank/schedule/ganttGray.png') no-repeat; }
+.scheduling_listTabActive div {background: url('/imageBank/schedule/ganttWhite.png') no-repeat;}
+
+.scheduling_detailsTab {left:280px; }
+.scheduling_detailsTab div {left:23px; }
+.scheduling_detailsTab span {left:46px; top:7px;}
+.scheduling_detailsTabInactive div {background: url('/imageBank/schedule/listGray.png') no-repeat;}
+.scheduling_detailsTabActive div {background: url('/imageBank/schedule/listWhite.png') no-repeat;}
+
+
+.scheduling_addScheduleLink {cursor:pointer; color:#3B85A8; display:block; padding:10px 0px 0px 34px; font-weight:bold; text-decoration:underline; background:url('/imageBank/Icons/create.png') no-repeat 15px 10px;}
+#scheduling_addScheduleEmpty {background-color:#ffffff; width:100%; display:none; height:140px; border-bottom:solid 1px #d0d0d0;}
+.scheduling_addScheduleEmptyWrap {width:100%; height:140px; position:relative; background:url('/imageBank/schedule/emptySchedule2.png') no-repeat 120px 35px;}
+.scheduling_addScheduleEmptyClick {position:absolute; top:40px; left: 212px; font-size:9pt; width:220px; color:#58595B;}
+#schedule_addScheduleEmptyButton {width:83px; margin-top:8px;}
+
+#scheduling_mbbBox {position:absolute; z-index:5; border:solid 1px #d0d0d0; background-color:White; width:141px; display:none; }
+
+.scheduling_scheduleListItem {position:relative; width:100%; height:50px; border-bottom:solid 1px #d0d0d0; background:url('/imageBank/schedule/schIconSmall.png') 15px 8px no-repeat; cursor:pointer;}
+.scheduling_scheduleListItemView {background:url('/imageBank/schedule/schIconViewSmall.png') 15px 8px no-repeat;} 
+.scheduling_scheduleListItemViewBadge {margin-left:10px; width:67px; height:15px; float:left; background:url('/imageBank/schedule/viewOnlyBadge.png') 0px 0px no-repeat;}
+
+.scheduling_scheduleListItem:hover {background-color: #DFECF5;}
+.scheduling_scheduleListItemHighlight {background-color: #f3fafe;}
+.scheduling_scheduleListItemStatic > span {display:block;}
+.scheduling_scheduleListItemStatic {padding:9px 0px 0px 55px;}
+.scheduling_scheduleListItemName span {font-weight:bold; float:left; display:inline-block; }
+.scheduling_scheduleListItemDetails {font-size:8pt; color:Gray; float:left; width:100%; }
+.scheduling_scheduleListItemClickableArea {position:absolute; width: 55px; height:100%; top:0px; left:0px; cursor:pointer; }
+.scheduling_scheduleListItemButtons {position:absolute; right:10px; top:15px; width:50px; height:40px;}
+.scheduling_scheduleListItemProject {position:absolute; right:45px; top: 23px; height:20px; color:Gray; font-weight:bold; font-size:8pt;}
+.scheduling_scheduleListItemMoreMenu {float:right; background:url('/imageBank/Icons/moreMenuDisabled.gif') no-repeat; width:16px; height:16px;}
+.scheduling_scheduleListItemMoreMenuHighlight {background:url('/imageBank/Icons/moreMenu.gif');}
+.scheduling_scheduleListItemMoreMenuSelected {background:url('/imageBank/Icons/moreMenu.gif') no-repeat; }
+
+#scheduling_sidebar {display:inline-block; position:relative; border:solid 1px #e7e7e7; width:260px; margin-top:30px;  /* height:365px; */ height:315px; float:right;}
+#scheduling_sidebarContent {padding:10px 0px 0px 10px;}
+.scheduling_sidebarStaticLab {display:block; padding-bottom:3px;}
+
+.scheduling_sidebarLink {display:block; color:#3B85A8; font-size:9pt; cursor:pointer; padding:0px 0px 0px 23px; height:17px; margin-bottom:7px;}
+.scheduling_sidebarLinkView {background: url('/imageBank/Icons/viewGantt.png') no-repeat 0px 0px;}
+.scheduling_sidebarLinkEdit {background: url('/imageBank/Icons/edit.png') no-repeat 0px 0px;}
+.scheduling_sidebarLinkDelete {background: url('/imageBank/Icons/delete.png') no-repeat 0px 0px;}
+.scheduling_sidebarLinkPrint {background: url('/imageBank/Icons/print.png') no-repeat 0px 0px;}
+
+#scheduling_scrollBoxWrapper {width:1115px; height:635px; overflow:hidden; border:0; padding:0; margin:0; position:relative; display:none;}
+#scheduling_scrollBox {width:535px; height:600px; overflow:scroll; border:solid 1px #D0D0D0; position:relative; float:left;}
+#scheduling_scrollBox_list {width:562px; height:600px; overflow-x:scroll; overflow-y:hidden; border:solid 1px #D0D0D0; position:relative; float:left;}
+#scheduling_scrollBoxLatDragger {width:5px; float:left; height:100%; cursor:e-resize; position:relative; z-index:1; }
+#scheduling_scrollBoxLatDraggerHandle {width:5px; height:100%; position:absolute; top:49%; left:564px; background:url('/imageBank/schedule/grabber.png') no-repeat; z-index:0; }
+
+#scheduling_numberCol {width:25px;  background-color: #F0F2F1; border-right:solid 1px #a1a0a0; position:absolute; top:70px; left:0px; z-index:2;}
+.scheduling_numberRow {height:25px; border-bottom:solid 1px #d0d0d0; width:25px; cursor:pointer;}
+.scheduling_numberRow span {display:block; padding-top:5px; color:#464749; width:25px; text-align:center; font-weight:bold; font-size:9pt;}
+.scheduling_numberRowFloating {position:absolute; background-color:#F0F2F1;}
+
+#scheduling_headerRow {position:absolute; top:0px; left:0px; height:70px;  background-color:White; z-index:2; border-bottom:solid 1px #a1a0a0; z-index:4;}
+#scheduling_headerBuffer {position:absolute; top:1px; left:1px; height:70px; width:25px; background-color:#e5e5e5; border-right:solid 1px #a1a0a0; z-index:3; }
+.scheduling_headerMonth {float:left; width:780px; height:70px; border:solid 1px #a1a0a0; border-top:none; border-left:none;}
+.scheduling_headerMonthTop { height:39px; border-bottom:solid 1px #d0d0d0; background-color:#F2F9FD; overflow:hidden;}
+.scheduling_headerMonthTop span {display:block; padding-left:7px; }
+.scheduling_monthN {color:#464749; font-size:10pt; padding-top:3px;  }
+.scheduling_monthY {color:gray; font-size:9pt;  }
+.scheduling_headerMonthDayBox { height:30px;  }
+.scheduling_headerMonthDay {width:25px; float:left; height:30px; border-left:solid 1px #d0d0d0; background-color: White;}
+.scheduling_headerMonthDay span {color:#808080; font-size:8pt; display:block; float:left; padding-left:0px; text-align:center; width:24px; }
+.scheduling_headerMonthDayFirst {border-left:none;}
+
+#scheduling_listHeader {position:absolute; top:0px; left:0px; height:70px; /*width:562px;*/ width:1782px; background-color:white;  z-index:2; border-bottom:solid 1px #a1a0a0;}
+#scheduling_listHeaderBuffer {position:absolute; top:71px; left:1px; height:30px; width:25px; background-color:White; border-right:solid 1px #a1a0a0; z-index:4; text-align:center;  }
+#scheduling_listHeaderBuffer span {font-weight:bold; font-size:10pt; color:#464749; padding-top:6px; text-align:center; display:block;}
+#scheduling_listHeaderTop { height:39px; width:100%; border-bottom:solid 1px #d0d0d0; background-color:#DFECF5; overflow:hidden;  }
+#scheduling_listHeaderTop_selectWrap {float:left; width: auto; padding:9px 0px 0px 10px;}
+#scheduling_listHeaderTop_selectWrap select {height:20px; font-size:9pt; width:290px;}
+#scheduling_listHeaderTop_labWrap span {float:left; width: auto; padding:10px 0px 0px 10px;}
+#scheduling_listHeaderTop span {font-size:11pt; font-weight:bold; color:#464749;}
+
+#scheduling_listHeaderBottom {width:100%; height:30px; }
+.scheduling_listHeaderCell {height:30px; float:left; overflow:hidden; border-right:solid 1px #A1A0A0; }
+.scheduling_listHeaderCellLab {font-weight:bold; font-size:10pt; color:#464749; padding-top:6px; padding-left:5px; text-align:left; display:block;}
+.scheduling_listHeaderCellLabLeft {}
+
+#scheduling_eventListContainer {position:absolute; top:70px; left:25px;  background-color:white; width:537px;  overflow:hidden; }
+.scheduling_eventListRow {height:25px; border-bottom:solid 1px #d0d0d0; width:100%; position:absolute; left:0px; cursor:pointer; z-index:1; background: rgba(255,255,255,0.1); }
+.scheduling_eventListRowDisabledClick {position:absolute; width:100%; height:100%; z-index:3; display:none;}
+.scheduling_eventListRowGroup {font-weight:bold; background-color:#f2f9fd; }
+.scheduling_eventListRowGroup input {font-size:9pt;}
+.scheduling_eventListRowGroup span {font-size:9pt;}
+.scheduling_eventListRowGroupHighlight {background-color:Transparent;}
+.scheduling_eventListCell {height:25px; float:left; color:#464749; position:relative; overflow:hidden; border-right:solid 1px #D0D0D0; z-index:2;}
+
+.scheduling_eventListRow_INACTIVE .scheduling_eventListCellInput, .scheduling_eventListRow_INACTIVE .scheduling_eventListCellLab, .scheduling_eventListRow_INACTIVE .scheduling_eventListCell {color:#acacad;}
+
+.scheduling_eventListCellLab { font-size:8pt; color:#464749; padding-top:5px; padding-left:6px; text-align:left; display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.scheduling_eventListCellLabLeft {text-align:left; }
+.schedule_eventListCellBorder {position:absolute;  height:21px; top:0px; border:solid 2px #58595B; }
+
+.scheduling_blankGanttRow {position:absolute; left:0px; height:26px; width:100%; z-index:0; }
+.scheduling_blankGanttRow_highlight{background: rgb(255,221,138); background: rgba(255,221,138,0.6); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFDD8A, endColorstr=#99FFDD8A)"; /*background-color:#FFDD8A;*/ }
+.scheduling_blankGanttRow_highlightSoft {background: rgb(224,224,224); background: rgba(224,224,224,0.6); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#55E0E0E0 , endColorstr=#55E0E0E0 )"; /*background-color:#FFDD8A;*/ }
+
+.scheduling_eventListCellInput {outline-width: 0; border:0; position:absolute; top:0px; left:0px; z-index:1; background-color:Transparent; padding:0px; margin:0px; margin-top:3px; height:18px; font-family:Arial; font-size:8pt; color:#464749;}
+.scheduling_eventListCellInputDisabled {color:Gray; font-style:italic;}
+.scheduling_eventListCellLabDisabled {color:Gray; font-style:italic;}
+.scheduling_eventListCellInputLeft {}
+
+.scheduling_eventListCell_Title input {width:228px;}
+.scheduling_eventListCell_Start input {width:51px; left:5px;}
+.scheduling_eventListCell_End input {width:51px; left:5px;}
+.scheduling_eventListCell_Duration input {width:36px;  left:5px;}
+.scheduling_eventListCell_Percent input {width:38px; left:5px;}
+.scheduling_eventListCell_Parents input {width:95px; left:5px;}
+.scheduling_eventListCell_StartD input {width:95px; left:0px; text-align:right;}
+.scheduling_eventListCell_EndD input {width:95px; left:0px; text-align:right;}
+.scheduling_eventListCell_StartD span {padding-left:0px; text-align:right; margin-right:6px;}
+.scheduling_eventListCell_EndD span {padding-left:0px; text-align:right; margin-right:6px;}
+.scheduling_eventListCell_DurationD input {width:38px; left:0px; text-align:right;}
+.scheduling_eventListCell_DurationD span {text-align:right; padding-left:0px; margin-right:6px;}
+.scheduling_eventListCell_DaysRemaining  {cursor:default;}
+.scheduling_eventListCell_DaysRemaining span {text-align:right; padding-left:0px; margin-right:6px; cursor:default;}
+.scheduling_eventListCell_ParentsD input {width:89px; left:5px; }
+.scheduling_eventListCell_CalendarDays {cursor:default;}
+.scheduling_eventListCell_CalendarDays span {text-align:right; padding-left:0px; margin-right:6px; cursor:default;}
+.scheduling_eventListCell_Priority span {padding-left:30px;}
+.scheduling_eventListCell_Status span {padding-left:32px;}
+.scheduling_eventListCell_Reminders span {padding-left:31px;}
+.scheduling_eventListCell_Resources {}
+.scheduling_eventListCell_Resources span {}
+.scheduling_eventListCell_PercentD {position:relative; }
+.scheduling_eventListCellPercentContainer {position:absolute; width:55px; left:15px; top:6px; border:solid 1px #d0d0d0; height:11px; background:url('/imageBank/schedule/altWhite.png') repeat-x;}
+.scheduling_eventListCellPercentBar {height:11px; background:url('/imageBank/schedule/altBlues.png') repeat-x;}
+.scheduling_eventListCellPercentLabel {position:absolute; left:80px; top:5px; font-size:8pt;}
+
+.scheduling_eventListCellGraphic_note {background:url('/imageBank/schedule/note.png') 14px 4px no-repeat;}
+.scheduling_eventListCellGraphic_attachment {background:url('/imageBank/schedule/attachment.png') 0px 0px no-repeat;}
+.scheduling_eventListCellGraphic_priorityHIGH {background:url('/imageBank/schedule/priorityHigh.png') 10px 4px no-repeat;}
+.scheduling_eventListCellGraphic_priorityMEDIUM {background:url('/imageBank/schedule/priorityMed.png') 10px 4px no-repeat;}
+.scheduling_eventListCellGraphic_priorityLOW {background:url('/imageBank/schedule/priorityLow.png') 10px 4px no-repeat;}
+.scheduling_eventListCellGraphic_reminder {background:url('/imageBank/schedule/reminder.png') 10px 4px no-repeat;}
+.scheduling_eventListCellGraphic_statusDONE {background:url('/imageBank/schedule/statusDone.png') 12px 4px no-repeat;}
+.scheduling_eventListCellGraphic_statusPAUSED {background:url('/imageBank/schedule/statusPaused.png') 12px 4px no-repeat;}
+.scheduling_eventListCellGraphic_statusRUNNING {background:url('/imageBank/schedule/statusRunning.png') 12px 4px no-repeat;}
+.scheduling_eventListCellGraphic_statusSTEADY {background:url('/imageBank/schedule/statusSteady.png') 12px 4px no-repeat;}
+.scheduling_eventListCellGraphic_statusWAITING {background:url('/imageBank/schedule/statusWaiting.png') 12px 4px no-repeat;}
+.scheduling_eventListCell_noBackground {background-image:none;}
+
+.scheduling_eventListCell_dropdown {display:none; padding:3px 0px 0px 5px;}
+.scheduling_eventListCell_dropdown select {width:78px; height:19px; font-size:8pt;}
+
+.scheduling_eventListCellPercentDropdownContainer {display:none; padding:3px 0px 0px 15px;}
+.scheduling_eventListCellPercentDropdown {width:90px; height:19px; font-size:8pt;}
+
+.scheduling_highlightList {background: rgb(255,221,138); background: rgba(255,221,138,0.6) !important; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFDD8A, endColorstr=#99FFDD8A)"; /*background-color:#FFDD8A;*/ }
+.scheduling_highlightListSoft {background: rgb(224,224,224); background: rgba(224,224,224,0.6); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#55E0E0E0 , endColorstr=#55E0E0E0 )"; /*background-color:#FFDD8A;*/ }
+
+
+#scheduling_eventListBlankRows {position:absolute; left:0px; top:0px; width:100%; z-index:1; display:inline-block; }
+.scheduling_eventListRowBlank {z-index:1; background-color:Transparent; }
+/*.scheduling_eventListRowBlank .scheduling_eventListCell {z-index:2;}
+.scheduling_eventListRowBlank .scheduling_eventListCellInput {z-index: 1}*/
+.scheduling_eventListRowBlank .scheduling_eventListCellPercentContainer {display:none;}
+
+.scheduling_eventListCellLabLeftNormal {padding-left:7px;}
+.scheduling_eventListCellLabLeftSub {padding-left: 20px;}
+.scheduling_eventListCellLabLeftGroup { padding-left:17px;}
+
+.scheduling_eventListArrow{position:absolute; width:20px; height:25px; top:0px; left:0px; display:none; }
+.scheduling_collapsed {background: url('/imageBank/schedule/arrowHead.png') no-repeat 8px 8px;  }
+.scheduling_expanded {background: url('/imageBank/schedule/arrowDown.png') no-repeat 6px 10px; }
+.scheduling_arrowHide {display:none;}
+
+.scheduling_eventListCol {height:100%; border-right:solid 1px #d0d0d0; float:left; }
+.scheduling_eventListColContainer {width:100%; height:100%;}
+
+#scheduling_eventContainer {position:absolute; top:70px; left:0px;  background-color:white; overflow:hidden; }
+.scheduling_eventCol {width:25px; height:100%; float:left; border-right:dashed 1px #d0d0d0; background-color:White; }
+.scheduling_eventColWeekend {background-color:#F9F9F9;}
+.scheduling_eventColMonthBreak {border-right: solid 1px #a1a0a0; width:25px;}
+.scheduling_eventColToday {width:25px; background-color:#e7e5e5;}
+
+.schedule_taskHandleE {position:absolute; left:0px; top:0px; height:18px; width:10px;  z-index:10;}
+.schedule_taskHandleW {position:absolute; right:0px; top:0px; height:18px; width:10px;  z-index:10;}
+
+.schedule_weekViewOverlay {position:absolute; top:0px;   height:100%; z-index:2; background: rgb(160,160,160); background: rgba(160,160,160,0.6); }
+#schedule_weekViewOverlayLeft {left:0px;}
+#schedule_weekViewOverlayRight {right:0px;}
+#schedule_weekViewOverlayX {z-index:11;  left:0px; right:0px; width:26px; height:24px;  cursor:pointer;}
+#schedule_weekViewOverlayX div {width:26px; height:24px;   background:url('/imageBank/schedule/weekOverlayXLTR.png') no-repeat; }
+
+.schedule_resizeOverlay {position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:10; opacity:0.6; filter:alpha(opacity=60); background-color:white; }
+.schedule_spinnerOverlay {position:absolute; height:100%; width:100%; z-index:10; opacity:0.6; filter:alpha(opacity=60); background-color:white;  }
+.schedule_spinnerGraphic {position:absolute; top:80px; left:50px;  }
+.schedule_spinnerMessage {position:absolute; top:155px; left:25px; width:135px; text-align:center; display:none;}
+.schedule_spinnerMessage span {font-size:11pt; }
+
+.scheduling_showAboveOverlay {z-index:11 !important;}
+.scheduling_t {z-index:1;}
+.scheduling_task {position:absolute !important; background-color:#dfecf5;  border:solid 1px #bbc9d2;  color:#616e77;  height:18px; font-size:8pt;  }
+.scheduling_taskWrap {padding-top:1px; padding-left:5px; overflow:hidden;  text-overflow: ellipsis; white-space:nowrap; cursor:move;  }
+.scheduling_task span {  }
+.scheduling_taskShortWrap {position:absolute; width:500px; cursor:pointer;}
+.scheduling_taskShortWrap .scheduling_task {position:relative !important; float:left;}
+.scheduling_taskShort{ padding-top:3px; padding-left:5px; font-size:8pt; color:#616e77; width:300px; float:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.scheduling_milestone {width:25px; float:left; height:19px; background: url('/imageBank/schedule/milestone.png') no-repeat 5px 2px; cursor:move; }
+.scheduling_taskPercentage{position:absolute;   height:11px; left:0px; top:3px; background-color:Gray; opacity:0.2; filter:alpha(opacity=20);  }
+
+.scheduling_highlightBox {background-color:#FFDD8A; width:100%; left:0px; height:25px; position:absolute; display:none;  opacity:0.7; filter:alpha(opacity=70);}
+.scheduling_highlightBoxSoft {background-color:#E0E0E0; width:100%; left:0px; height:25px; position:absolute; display:none;  opacity:0.6; filter:alpha(opacity=60);}
+
+.scheduling_t_INACTIVE_LONG {background-color:#ececec; border: solid 1px #b4b4b4; color:#8a8c8e; opacity:.5;}
+.scheduling_t_INACTIVE_LONG .scheduling_taskPercentage {background-color:#d7d7d7; opacity:1.0; filter:alpha(opacity=100);  z-index:-1;  }
+
+.scheduling_t_INACTIVE .scheduling_task {background-color:#ececec; border: solid 1px #b4b4b4; color:#8a8c8e; opacity:.5;}
+.scheduling_t_INACTIVE .scheduling_taskShort {color:#8a8c8e; opacity:.5;}
+.scheduling_t_INACTIVE .scheduling_taskPercentage {background-color:#d7d7d7; opacity:1.0; filter:alpha(opacity=100);  }
+.scheduling_t_INACTIVE .scheduling_milestone {background: url('/imageBank/schedule/milestone_inactive.png') 5px 2px no-repeat;}
+
+.scheduling_t_MINE_LONG {background-color:#a4baca; border: solid 1px #899ead; }
+.scheduling_t_MINE_LONG .scheduling_taskPercentage {background-color:#96a9b7; opacity:1.0; filter:alpha(opacity=100);  z-index:-1;  }
+
+.scheduling_t_MINE .scheduling_task {background-color:#a4baca; border: solid 1px #899ead;}
+.scheduling_t_MINE .scheduling_taskShort {}
+.scheduling_t_MINE .scheduling_taskPercentage {background-color:#96a9b7; opacity:1.0; filter:alpha(opacity=100);  }
+.scheduling_t_MINE .scheduling_milestone {background: url('/imageBank/schedule/milestone_darker_blue.png') 5px 2px no-repeat;}
+
+
+
+.scheduling_t_CRIT_LONG {background-color:#f14e4e; border: solid 1px #b22828; color:White;}
+.scheduling_t_CRIT_LONG .scheduling_taskPercentage {background-color:#ba2c2c; opacity:1.0; filter:alpha(opacity=100); z-index:-1;  }
+
+
+.scheduling_t_CRIT .scheduling_task{background-color:#f14e4e; border: solid 1px #b22828; color:White; }
+.scheduling_t_CRIT .scheduling_taskPercentage {background-color:#ba2c2c; opacity:1.0; filter:alpha(opacity=100);  }
+.scheduling_t_CRIT .scheduling_milestone {background: url('/imageBank/schedule/crit_milestone.png') 5px 2px no-repeat;}
+
+#scheduling_buttonBox {position:absolute; z-index:3; display:none;  }
+#scheduling_buttonBox_box {background-color:white; border: 1px solid rgb(197, 197, 197); height:226px; width:141px; position:absolute; top:15px; left:0px; display:none;} 
+.scheduling_buttonBox_option {width: 125px; height:12px; padding:8px; background-color:White; cursor:pointer; font-size:9pt; }
+.scheduling_buttonBox_option:hover {background-color:#eff7fc}
+.scheduling_buttonBox_optionIcon {display:block; margin-right:8px; float:left;}
+#scheduling_buttonBox_button {position:absolute; left:0px; top:0px; width:16px; height:16px; background:url('/imageBank/Schedule/grayButton.png') 0px 0px no-repeat; cursor:pointer;}
+.scheduling_buttonBox_buttonAlt {background:url('/imageBank/Icons/moreMenuAlt.png') 0px 0px no-repeat !important;}
+.scheduling_buttonBox_buttonHighlight {background:url('/imageBank/Icons/moreMenu.gif') 0px 0px no-repeat !important;} 
+
+.scheduling_toolbarButton {position:absolute; top: 0px; right:0px; cursor:pointer; display:block; width:124px; height:25px; background:url('/imageBank/schedule/showToolbar.png') no-repeat; display:none;} 
+.scheduling_helpButton {position:absolute; top: 0px; right:135px; cursor:pointer; display:block; width:49px; height:25px; background:url('/imageBank/schedule/helpButton.png') no-repeat; } 
+.scheduling_printButton {position:absolute; top: 0px; right:195px; cursor:pointer; display:block; width:49px; height:25px; background:url('/imageBank/schedule/printButton.png') no-repeat; } 
+.scheduling_devButton {position:absolute; top:0px; width: 200px; height:25px; cursor:pointer; display:none; font-weight:bold; text-decoration:underline; color:#3B85A8; }
+
+.scheduling_repairButton {position:absolute; top: 0px; right:270px; cursor:pointer; display:block; width:49px; height:25px; } 
+.scheduling_toolbarButtonShow {background:url('/imageBank/schedule/showToolbar.png') no-repeat;}
+.scheduling_toolbarButtonHide {background:url('/imageBank/schedule/hideToolbar.png') no-repeat;}
+
+.scheduling_viewLabel {position:absolute; top:0px; right:0px; display:none; color:#464749; height:25px; font-size:11pt; font-weight:bold;}
+
+#scheduling_viewToolbar {cursor:move; position:absolute; bottom:50px; right:80px; z-index:15; display:none;   width:650px; height:60px;  background: rgb(0,0,0); background: rgba(0,0,0,0.7);}
+#scheduling_viewToolbarContent{ background:url('/imageBank/schedule/viewIcon.png') 15px 10px no-repeat; padding:8px 0px 0px 62px; width:550px; height:55px;}
+#scheduling_viewToolbarContent span {color:white; display:block;}
+
+#scheduling_toolbar {cursor:move; position:absolute; bottom:50px; right:80px; z-index:15;   width:570px; height:110px; display:none;}
+#scheduling_toolbar_inner {width:570px; height:110px; background: rgb(0,0,0); background: rgba(0,0,0,0.7); }
+#scheduling_toolbar_inner span {}
+.scheduling_toolbar_xButton {position:absolute; width:16px; height:16px; top:5px; right:3px; background:url('/imageBank/Icons/close.png') no-repeat; cursor:pointer;}
+#scheduling_toolbar_categories {width:100%; display:inline-block; border-bottom:solid 1px white;} 
+.scheduling_toolbar_categoryButton {float:left; font-weight:bold; width:90px; cursor:pointer;  border-right:solid 1px white; text-align:center; padding:3px 0px 3px 0px; font-size:10pt; color:White;}
+.scheduling_toolbar_categoryButtonHighlight { background: rgba(0,0,0,0.3); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4B000000, endColorstr=#4B000000)";}
+
+.scheduling_toolbar_viewOnlyCategoryButton {float: left; width: 240px; padding:3px 0px 3px 0px; cursor:pointer; border-right:solid 1px white; background: rgba(0,0,0,0.3); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4B000000, endColorstr=#4B000000)";}
+.scheduling_toolbar_viewOnlyCategoryButton strong {font-size:10pt; color:White; display: block; float:left; padding-left:30px  }
+.scheduling_toolbar_viewOnlyCategoryButton span {font-size:9pt; color:#74c4f9; display:block; float:left; padding-left:15px; padding-top:1px; }
+
+#scheduling_toolbar_actions {width:100%; height:88px; position:relative;}
+.scheduling_toolbar_actionBox {display:none; width:100%; height:88px; position:relative;}
+.scheduling_toolbar_viewerBox .scheduling_toolbar_actionButton span {width:60px; padding-left:7px;}
+.scheduling_toolbar_viewerBox .scheduling_toolbar_actionButton {width:75px;}
+
+.scheduling_toolbar_taskBox .scheduling_toolbar_actionButton {width:75px;}
+.scheduling_toolbar_toolsBox .scheduling_toolbar_actionButton {width:75px;}
+
+.scheduling_toolbar_actionButton {float:left; width:80px; height:88px; position:relative; cursor:pointer;}
+.scheduling_toolbar_actionButton span {text-align:center; display:block; position:absolute; font-size:9pt; left:0px; top:48px; width:76px; color:White; }
+.scheduling_toolbar_actionButtonDivider {float:left; width:1px; height:66px; margin:12px 10px 12px 0px; background-color:White;}
+.scheduling_toolbar_editTask {background:url('/imageBank/schedule/iconEdit.png') 22px 12px no-repeat;}
+.scheduling_toolbar_deleteTask {background:url('/imageBank/schedule/iconDelete.png') 20px 12px no-repeat;}
+.scheduling_toolbar_taskNotes {background:url('/imageBank/schedule/iconNotes.png') 16px 12px no-repeat;}
+.scheduling_toolbar_addTask {background:url('/imageBank/schedule/iconAddTask.png') 18px 12px no-repeat;}
+.scheduling_toolbar_addSchedule {background:url('/imageBank/schedule/newSchedule.png') 22px 12px no-repeat;}
+.scheduling_toolbar_duplicateSchedule {background:url('/imageBank/schedule/iconDuplicate.png') 22px 12px no-repeat;}
+.scheduling_toolbar_templateSchedule {background:url('/imageBank/schedule/iconTemplate.png') 22px 12px no-repeat;}
+.scheduling_toolbar_addGroup {background:url('/imageBank/schedule/iconAddGroup.png') 20px 12px no-repeat;}
+.scheduling_toolbar_addMilestone {background:url('/imageBank/schedule/iconMilestone.png') 22px 12px no-repeat;}
+.scheduling_toolbar_outdent {background:url('/imageBank/schedule/iconOutdent.png') 21px 12px no-repeat;}
+.scheduling_toolbar_indent {background:url('/imageBank/schedule/iconIndent.png') 19px 12px no-repeat;}
+.scheduling_toolbar_toTask {background:url('/imageBank/schedule/iconConvertToTask.png') 21px 12px no-repeat;}
+.scheduling_toolbar_toGroup {background:url('/imageBank/schedule/iconConvertToGroup.png') 21px 12px no-repeat;}
+.scheduling_toolbar_toToday {background:url('/imageBank/schedule/iconGotoToday.png') 20px 12px no-repeat;}
+.scheduling_toolbar_showAll {background:url('/imageBank/schedule/iconShowAll.png') 21px 12px no-repeat;}
+.scheduling_toolbar_oneWeek {background:url('/imageBank/schedule/iconOneWeek.png') 22px 12px no-repeat;}
+.scheduling_toolbar_twoWeeks {background:url('/imageBank/schedule/iconTwoWeeks.png') 21px 12px no-repeat;}
+.scheduling_toolbar_fourWeeks {background:url('/imageBank/schedule/iconFourWeeks.png') 21px 12px no-repeat;}
+.scheduling_toolbar_collapse {background:url('/imageBank/schedule/iconCollapseAll.png') 13px 12px no-repeat;}
+.scheduling_toolbar_expand {background:url('/imageBank/schedule/iconExpandCall.png') 15px 12px no-repeat;}
+.scheduling_toolbar_moveUp {background:url('/imageBank/schedule/moveUp.png') 21px 12px no-repeat;}
+.scheduling_toolbar_moveDown {background:url('/imageBank/schedule/moveDown.png') 21px 12px no-repeat;}
+.scheduling_toolbar_guide {background:url('/imageBank/schedule/guide.png') 39px 12px no-repeat;}
+.scheduling_toolbar_shift {background:url('/imageBank/schedule/iconShift.png') 22px 12px no-repeat;}
+.scheduling_toolbar_workdays {background:url('/imageBank/schedule/iconSetWorkdays.png') 22px 12px no-repeat;}
+.scheduling_toolbar_crit {background:url('/imageBank/schedule/iconCritPath.png') 21px 12px no-repeat;}
+.scheduling_toolbar_compressSchedule {background:url('/imageBank/schedule/iconCompress.png') 18px 12px no-repeat;}
+.scheduling_toolbar_hideMyTasks {background:url('/imageBank/schedule/iconHideMyTasks.png') 22px 12px no-repeat;}
+.scheduling_toolbar_myFirstTask {background:url('/imageBank/schedule/iconMyFirstTask.png') 20px 12px no-repeat;}
+.scheduling_toolbar_showMyTasks {background:url('/imageBank/schedule/iconShowMyTasks.png') 21px 12px no-repeat;}
+.scheduling_toolbar_reminders {background:url('/imageBank/schedule/iconReminders.png') 21px 12px no-repeat;}
+.scheduling_toolbar_sendMessage {background:url('/imageBank/schedule/iconSendMessage.png') 22px 12px no-repeat;}
+.scheduling_toolbar_showMyTasksWide {background:url('/imageBank/schedule/iconShowMyTasks.png') 61px 12px no-repeat; width:165px;}
+.scheduling_toolbar_print {background:url('/imageBank/schedule/iconPrint.png') 20px 12px no-repeat; width:165px;}
+.scheduling_toolbar_showMyTasksWide span {width:150px; left:4px;}
+
+.scheduling_toolbar_viewOnlySection {background:url('/imageBank/schedule/viewIcon.png') 8px 25px no-repeat; float:left; padding-top:20px; color:White;}
+.scheduling_toolbar_viewOnlySection strong {display:block; padding-left:60px; padding-bottom:3px;}
+.scheduling_toolbar_viewOnlySection span {display:block; padding-left:60px;}
+
+.scheduling_toolbar_comingSoon {font-size:12pt; font-weight:bold; display:block; padding:15px;}
+.ui-effects-transfer { border: solid 1px black; background-color:Black; z-index:15; background: rgb(0,0,0); background: rgba(0,0,0,0.7); }
+
+.scheduling_toolbar_actionLabel {position:absolute; top: 7px; left:0px; font-weight:bold; font-size:11pt;}
+
+.scheduling_groupBracket {position:absolute;  height:15px; z-index:1; cursor:move; width:900px;}
+.scheduling_groupBracket_INACTIVE {opacity:.5;}
+.scheduling_groupBacketWrap {width:100%; height:15px; position:relative;}
+.scheduling_lBracket {position:absolute; top:0px; left:0px;  height:15px; width:8px; background:url('/imageBank/schedule/left_group_bracket.png') no-repeat 0px 5px;}
+.scheduling_lMidBracket {position:absolute; top:0px; left:8px;  height:15px; background:url('/imageBank/schedule/mid_group_bracket.png') repeat-x 0px 5px;}
+.scheduling_rMidBracket {position:absolute; top:0px; right:8px;  height:15px; background:url('/imageBank/schedule/mid_group_bracket.png') repeat-x 0px 5px;}
+.scheduling_rBracket {position:absolute; top:0px; right:0px;  height:15px; width:8px; background:url('/imageBank/schedule/right_group_bracket.png') no-repeat -49px 5px;}
+.scheduling_bracketLab {position:absolute; top:0px; color:#616E77; font-size:8pt; text-align:center;  white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+.scheduling_groupBracketEmpty {left: 10px; cursor:pointer; }
+.scheduling_groupBracketEmpty .scheduling_bracketLabShort {left: 0px; top:4px; }
+.scheduling_emptyLBracket {display:none; position:absolute; top:2px; left:0px; height:15px; width:57px; background:url('/imageBank/schedule/emptyBracketLeft.png') no-repeat 0px 5px;}
+.scheduling_emptyRBracket {display:none; position:absolute; top:2px; left:57px; height:15px; width:57px; background:url('/imageBank/schedule/emptyBracketRight.png') no-repeat 0px 5px;}
+
+.scheduling_bracketLabShort {position:absolute; top:2px; color:#616E77; font-size:8pt; text-align:center;  white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.scheduling_rMidBracketShort {position:absolute; top:0px;  height:15px; background:url('/imageBank/schedule/mid_group_bracket.png') repeat-x 0px 5px;}
+.scheduling_rBracketShort {position:absolute; top:0px;   height:15px; width:8px; background:url('/imageBank/schedule/right_group_bracket.png') no-repeat -49px 5px;}
+
+.scheduling_textWidthStaging {position:absolute; float:left; white-space:nowrap; visibility:hidden; color:#616E77; font-size:8pt;}
+
+.scheduling_arrowHead {position:absolute; height:8px; width:4px; background:url('/imageBank/schedule/arrowHead.png') no-repeat; z-index:1;}
+.scheduling_arrowLineVert {position:absolute; width:2px; background:url('/imageBank/schedule/arrowSquare.png') repeat-y; z-index:1;}
+.scheduling_arrowLineHoriz {position:absolute; height:2px; background:url('/imageBank/schedule/arrowSquare.png') repeat-x; z-index:1;}
+
+.scheduling_arrowHead_CRIT {background:url('/imageBank/schedule/crit_arrowHead.png') no-repeat; z-index:2;}
+.scheduling_arrowLineVert_CRIT {position:absolute; width:2px; background:url('/imageBank/schedule/crit_arrowSquare.png') repeat-y; z-index:2;}
+.scheduling_arrowLineHoriz_CRIT {position:absolute; height:2px; background:url('/imageBank/schedule/crit_arrowSquare.png') repeat-x; z-index:2;}
+
+.scheduling_arrowHead_INACTIVE {background:url('/imageBank/schedule/arrowHead.png') no-repeat; z-index:2; opacity:.4;}
+.scheduling_arrowLineVert_INACTIVE {position:absolute; width:2px; background:url('/imageBank/schedule/arrowSquare.png') repeat-y; z-index:2; opacity:.4;}
+.scheduling_arrowLineHoriz_INACTIVE {position:absolute; height:2px; background:url('/imageBank/schedule/arrowSquare.png') repeat-x; z-index:2; opacity:.4;}
+
+#corder_projectList {width:100%; font-size:10pt; height:20px; }
+
+#corder_mainTabContainer {height:31px; width:100%; position:relative; float:left; margin-top:15px;}
+#corder_mainTabBorder {width:100%; height:1px; background-color:#8e8d8d;position:absolute; left:0px; top:30px; z-index:5;}
+#corder_mainTabs { height:30px; width:380px; position:absolute; top:0px; left:0px; }
+.corder_tab {width:150px; height:30px; border:solid 1px #d0d0d0; border-bottom:none; position:absolute; top:0px; z-index:5; cursor:pointer; }
+.corder_tab div {width:16px; height:16px; position:absolute; top:7px; }
+.corder_tab span {display:block; font-weight:bold; position:absolute;  top:7px;}
+
+.corder_tabInactive span {color:Gray;}
+.corder_tabActive span {color:white;}
+.corder_tabActive {background-color:#4280a4; border-color:#4280a4;}
+
+.corder_summaryTab {left: 163px;}
+.corder_summaryTab div {left:32px; top:7px;}
+.corder_summaryTab span {left:55px; top:7px; }
+.corder_summaryTabInactive div {background: url('/imageBank/changeorders/summaryGray.png') no-repeat;}
+.corder_summaryTabActive div {background: url('/imageBank/changeorders/summaryWhite.png') no-repeat;}
+
+.corder_listTab {left:0px;}
+.corder_listTab div {left:15px; }
+.corder_listTab span {left:37px; top:7px;}
+.corder_listTabInactive div {background: url('/imageBank/changeorders/corderGray2.png') no-repeat; }
+.corder_listTabActive div {background: url('/imageBank/changeorders/corderWhite2.png') no-repeat;}
+
+#corder_tableContainer {width:100%; padding-top:30px; position:relative; float:left;}
+#corder_builderLinks {width:295px; position:absolute; top:5px; right:5px; }
+#corder_builderLinks span {display:block; font-size:10pt; font-weight:bold; text-decoration:underline; color:#3B85A8; background-position:0px 0px; background-repeat:no-repeat;  }
+#corder_builderLinkNew {background-image:url('/imageBank/Icons/create.png'); padding-left:20px; float:left; cursor:pointer;}
+#corder_builderLinkEdit {background-image:url('/imageBank/Icons/edit.png'); padding-left:20px; float:right; cursor:pointer;}
+#corder_builderLinkDetails {background-image:url('/imageBank/Icons/edit.png'); padding-left:20px; float:right; cursor:pointer;}
+
+.corder_table { border-collapse:separate; border-spacing:0px; *border-collapse:collapse; width:100%; border:solid 1px #D0D0D0; }
+
+.corder_table tfoot td {background-color:#f2f9fd; height:35px; vertical-align:top;}
+.corder_table tfoot td > div {width:100%; padding-top:4px;}
+#corder_builderAddLink {color:#3B85A8; font-size:10pt; font-weight:bold; text-decoration:underline;}
+#corder_builderAddLink span {display:block; padding:5px 0px 0px 20px; cursor:pointer;}
+
+#corder_builderForm > div { float:left;}
+#corder_builderForm > span {display:block; margin-left:2%; margin-right:5px; float:left; padding-top:3px;}
+#corder_builderForm .simpleModalButtonPrimary {float:left; margin-left:40px;}
+#corder_builderForm .simpleModalButtonSecondary {float:left; margin-left:8px;}
+
+
+#corder_builderForm span {font-size:8pt;}
+#corder_builderForm > div > input {font-size:8pt; margin-top:1px; padding:0px 0px 0px 3px; border:solid 1px #d0d0d0; height:18px;}
+
+#corder_builderForm_name {/*width:220px;*/ width:100%; padding-left:3px;}
+
+#corder_builderForm_contacts {/*width:160px;*/ width:100%;  padding-left:3px;}
+#corder_builderForm_contactButton {position:absolute; top:2px; right:0px; width:16px; height:16px; background:url('/imageBank/Icons/contact_card_16px.png') 0px 0px no-repeat;}
+#corder_builderForm_contactBox {position:absolute; top:20px; left:0px; width:100%; height:100px; background-color:#ffffff; overflow-x:hidden; overflow-y:scroll; border:solid 1px #d0d0d0; padding-top:10px; }
+#corder_builderForm_contactBox label {display:block; padding-left:5px; float:left; width:70%; font-size:9pt; cursor:pointer; }
+#corder_builderForm_contactBox input {margin:0px;}
+#corder_builderForm_contactBox > div  {display:inline-block; width:100%; padding-bottom:6px; cursor:pointer;}
+#corder_builderForm_contactBox > div > div {float:right; width:13%; }
+
+#corder_builderForm_cost {/*width:100px;*/ width:100%;  text-align:right;}
+#corder_builderForm_time {/*width:100px;*/ width:100%;  text-align:right;}
+
+
+
+.corder_headerRow .corder_contentCell {background-color:#DBE1E7; position:relative;  height:28px; border-right: #FFFFFF solid 1px; border-bottom:solid 2px #D0D0D0; cursor:pointer;}
+.corder_headerRow .corder_contentCell span { color:#464749; font-size:10pt; font-weight:bold; display:block;}
+.corder_headerRow .corder_contentCell_left span{padding-left:15px;  }
+.corder_headerRow .corder_contentCell_center span{ width:100%; text-align:center;}
+
+.corder_contentRow .corder_contentCell {position:relative;  height:35px; border-right: #D0D0D0 solid 1px; border-bottom:solid 1px #D0D0D0; cursor:pointer; color:#464749; font-size:9pt;  }
+.corder_contentRow .corder_contentCell span {display:block; }
+.corder_contentRow .corder_contentCell_left span{padding-left:10px;  }
+.corder_contentRow .corder_contentCell_right span{text-align:right; padding-right:10px; }
+.corder_contentRow .corder_contentCell_center span{ width:100%; text-align:center;}
+.corder_contentRow .corder_contentCell_centerBlock span{ margin:0px auto;}
+
+.corder_emptyRow td {height:150px; vertical-align:top; border-bottom:solid 1px #d0d0d0; }
+.corder_emptyRow td>div {width:100%; }
+.corder_emptyRow td>div>div {width:360px; height:70px; margin:36px auto 0px auto; background:url('/imageBank/changeorders/emptyChangeOrders.png') 0px 0px no-repeat;}
+.corder_emptyRow td>div>div>span {display:block; padding-left:77px; padding-top:5px; float:left;}
+.corder_emptyRow td>div>div>div { float:left; margin-top:8px; margin-left:77px;}
+
+#corder_builderTable .corder_cell1 {width:4%;}
+#corder_builderTable .corder_cell2 {width:17%;}
+#corder_builderTable .corder_cell3 {width:17%;}
+#corder_builderTable .corder_cell4 {width:17%;}
+#corder_builderTable .corder_cell5 {width:7%;}
+#corder_builderTable .corder_cell6 {width:7%;}
+#corder_builderTable .corder_cell7 {width:9%;}
+#corder_builderTable .corder_cell8 {width:12%;}
+#corder_builderTable .corder_cell9 {width:11%; border-right:none;}
+
+#corder_builderTable .corder_contentRow .corder_cell1 span {font-weight:bold;}
+#corder_builderTable .corder_contentRow .corder_cell2 span {cursor:pointer; color:#3B85A8; font-weight:bold;}
+
+.corder_attachEmpty span {cursor:pointer; color:#3B85A8; font-weight:bold; text-decoration:underline; width:42px;}
+.corder_attachHas span { height:16px; background:url('/imageBank/logging/attach.png') 0px 0px no-repeat; padding-left: 20px !important; width:60px;}
+.corder_statusCell_APPROVED span {color:Green;}
+.corder_statusCell_APPROVED .corder_buttonArea{display:none;}
+
+.corder_statusCell_PENDING span {}
+.corder_statusCell_REJECTED span { color:#cd2929;}
+.corder_statusCell_REJECTED .corder_buttonArea{display:none;}
+#corder_builderTable .corder_statusCell_REJECTED span {background:url('/imageBank/changeorders/rejected.png') 70px 1px no-repeat;}
+
+#corder_clientTable .corder_cell1 {width:4%;}
+#corder_clientTable .corder_cell2 {width:18%;}
+#corder_clientTable .corder_cell3 {width:26%;}
+#corder_clientTable .corder_cell4 {width:8%;}
+#corder_clientTable .corder_cell5 {width:9%;}
+#corder_clientTable .corder_cell6 {width:11%;}
+#corder_clientTable .corder_cell7 {width:24%; border-right:none;}
+
+#corder_clientTable .corder_contentRow .corder_cell1 span {font-weight:bold;}
+#corder_clientTable .corder_contentRow .corder_cell2 span {cursor:pointer; color:#3B85A8; font-weight:bold;}
+#corder_clientTable .corder_statusCell_PENDING > span {width:60px; padding:3px 0px 0px 10px; float:left; }
+#corder_clientTable .corder_statusCell_APPROVED > span {padding-left:10px;}
+#corder_clientTable .corder_statusCell_REJECTED > span {padding-left:10px;}
+
+
+#corder_subTable .corder_cell1 {width:4%;}
+#corder_subTable .corder_cell2 {width:18%;}
+#corder_subTable .corder_cell3 {width:27%;}
+#corder_subTable .corder_cell4 {width:8%;}
+#corder_subTable .corder_cell5 {width:9%;}
+#corder_subTable .corder_cell6 {width:11%;}
+#corder_subTable .corder_cell7 {width:12%;}
+#corder_subTable .corder_cell8 {width:11%; border-right:none;}
+
+#corder_subTable .corder_contentRow .corder_cell1 span {font-weight:bold;}
+#corder_subTable .corder_contentRow .corder_cell2 span {cursor:pointer; color:#3B85A8; font-weight:bold;}
+#corder_subTable .corder_statusCell_REJECTED span {background:url('/imageBank/changeorders/rejected.png') 70px 1px no-repeat;}
+
+
+.corder_contentRowHighlight td {background-color:#DFECF5;}
+
+.corder_buttonArea {width:100px; float:right; width:135px;}
+.corder_buttonArea .simpleModalButtonGreen {float:left; margin-right:5px;} 
+.corder_buttonArea .simpleModalButtonRed {float:left;}
+.corder_buttonArea span {display:inline;}
+
+#corder_summaryContainer {width:100%; float:left;}
+
+.corder_mainSummaryHeader {font-size:12pt; float:left; margin-top:10px; font-weight:bold; display:block; color:#464749; width:100%;}
+.corder_summaryHeader {font-size:11pt; width:100%; float:left; font-weight:bold; color:#464749; margin-top:20px; margin-bottom:6px; position:relative;}
+.corder_summaryEditButton {position:absolute; width:41px; height:17px; background:url('/imageBank/changeorders/editButton.png') 0px 0px no-repeat; cursor:pointer; top:1px;}
+
+.corder_summarySection {width:48%; display:inline-block; }
+.corder_summarySection table {width: 100%; border:solid 1px #d0d0d0; border-spacing:0px; border-bottom:none;}
+.corder_summarySection td {height:30px; border-bottom:solid 1px #d0d0d0; border-left:solid 1px #d0d0d0;}
+.corder_summarySection td div {width:100%; font-size:9pt; color:#464749;}
+.corder_summarySection td .leftLab {display:block; float:left; padding-left:10px;}
+.corder_summarySection td .rightLab {display:block; float:right; padding-right:10px;}
+.corder_summarySection td .boldLab {font-weight:bold;}
+.corder_summarySection td .greenLab {color:Green;}
+.corder_summarySection td .redLab {color:#cd2929;}
+.corder_summarySection td .grayLab {color:gray;}
+
+
+
+.corder_summarySection .corder_summaryHugger {border-left:0px; vertical-align:top;}
+.corder_summarySection .corder_summaryHugger span {padding-top:6px; display:block; }
+.corder_summarySection .corder_summaryFullRow {border-left:0px;}
+.corder_summarySection .corder_summaryLastRow {border-bottom:0px;}
+.corder_summarySection .corder_summaryTotalRow {background-color:#f3fafe;}
+
+#corder_clientLink {color:#3B85A8; font-weight:bold; text-decoration:underline; cursor:pointer;}
+
+#modalCorderProjectBox {width:387px; height:43px; background:url('/imageBank/fileIcons/project.png') 10px 11px no-repeat #FFFFFF; padding-top:8px;}
+#modalCorderProjectBox span {display:block; padding-left:50px; font-size:9pt;}
+.modalCorderStatus_Rejected {color:Red;}
+.modalCorderStatus_Accepted {color:#388F42;}
+
+.modalCorderClientShadowBox {width:420px; height:242px; background-color:#FFFFFF;  margin-left:15px; font-size:9pt;}
+.modalCorderClientShadowBox > strong {display:block; margin-left:15px; width:390px; border-bottom:solid 1px #d0d0d0; padding-bottom:10px; padding-top:10px; margin-bottom:10px;}
+.modalCorderClientShadowBox > span {display:block; margin-left:15px; width:390px; height:180px; overflow-y:auto; overflow-x:hidden;  }
+
+.modalChoiceClientShadowBox {width:420px; display:inline-block; background-color:#FFFFFF;  margin-left:15px; font-size:9pt;}
+.modalChoiceClientShadowBox > .modalChoiceClientTitle {display:block; margin-left:15px; width:390px; border-bottom:solid 1px #d0d0d0; padding-bottom:10px; padding-top:10px; margin-bottom:10px;}
+.modalChoiceClientShadowBox > .modalChoiceClientDetails {display:block; margin-left:15px; width:390px; height:120px; overflow-y:auto; overflow-x:hidden;  }
+.modalChoiceClientShadowBox > .modalChoiceClientExtraDetails { margin-left:15px; width:390px; border-top:solid 1px #d0d0d0; padding-top:15px; margin-top:10px;  }
+.modalChoiceClientShadowBox > .modalChoiceClientExtraDetails span { display:block; width:100%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.modalChoiceClientShadowBox > .modalChoiceClientExtraDetails a {color:#236F95;}
+
+#modalCorderRejectReasoningBox {width:420px; height:242px; background-color:#FFFFFF;  margin-left:15px; font-size:9pt;}
+#modalCorderRejectReasoningBox .modalCorderRejectCorderTitle {display:block; margin-left:15px; width:390px; border-bottom:solid 1px #d0d0d0; padding-bottom:10px; padding-top:10px; margin-bottom:10px;}
+#modalCorderRejectReasoningBox .modalCorderRejectCorderReasoning {display:block; margin-left:15px; width:390px; height:140px; overflow-y:auto; overflow-x:hidden;  }
+
+#modalCorderClientDisclaimer {width:420px; height:35px;  padding-top:10px;   margin-left:15px; border-top:#D0D0D0 solid 1px;}
+#modalCorderClientDisclaimer span {font-size:9pt; width:400px; display:block; }
+
+#modalChoiceClientDisclaimer {width:420px; height:35px;  padding-top:10px;   margin-left:15px; border-top:#D0D0D0 solid 1px;}
+#modalChoiceClientDisclaimer span {font-size:9pt; width:400px; display:block; }
+
+
+#modalCorderRejectReasoningInput {width:415px; height:170px; border: solid 1px #d0d0d0; margin-left:15px; font-size:8pt; font-family:Sans-Serif; padding:5px 0px 0px 5px;}
+
+#modalChoiceProjectBox {width:340px; height:70px; background:url('/imageBank/fileIcons/project.png') 10px 11px no-repeat #FFFFFF; padding-top:8px;}
+#modalChoiceProjectBox span  {display:block; padding-left:50px; padding-bottom:3px; font-size:9pt;}
+#modalChoice .modalCalEvent_resourceRow span {width:278px; font-size:8pt;}
+
+.modalShadowBox {border-collapse:separate; -moz-box-shadow: 1px 2px 3px #AAA; -webkit-box-shadow: 1px 2px 3px #AAA; box-shadow: 1px 2px 3px #AAA; -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=125, Color='#AAAAAA')"; filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=125, Color='#AAAAAA');}
+
+#scheduling_hiddenWidthChecker {display:none; width:100%;}
+
+.ArchivedProjectIcon {opacity:0.4; filter:alpha(opacity=40);}
+
+.newMaster_contentWhite {overflow-x:hidden; width: 100%; min-height: 600px; _height: 600px; background-color: white; padding-top:10px;}
+.newMaster_sidebarGrabber {position:absolute; top:10px; left:0px; width:15px; height:30px; cursor:pointer;}
+.newMaster_sidebarGrabber_hide {background:url('/imageBank/navigation/hideLSB.png') no-repeat; }
+.newMaster_sidebarGrabber_show {background:url('/imageBank/navigation/showLSB.png') no-repeat;}
+.newMaster_mainToolbar {  width: 100%; height: 52px; background-position: top left; background-repeat: repeat-x; background-image: url(../imageBank/toolbarBackground52.jpg); background-color: white; border-bottom: solid 1px #A2A2A2; _overflow: hidden; position:relative; }
+.newMaster_uploadButton { cursor:pointer; position:absolute; top:10px; left:20px; height:30px; width:89px; background:url('/imageBank/navigation/upload.png') no-repeat; }
+.newMaster_newButton { cursor:pointer; position:absolute; top:10px; left:109px; height:30px; width:92px; background:url('/imageBank/navigation/new.png') no-repeat;}
+
+.newMaster_outlookTabSet {width:187px; font-weight:bold; font-size:11pt; padding-left:5px; padding-top:10px;}
+.newMaster_outlookTab {color:#5a5b5e; padding-top:6px; border-bottom:solid 1px #C7C8CA;  width:182px; height:25px; cursor:pointer; padding-left:10px;}
+.newMaster_outlookTab_highlight {color:white; background:url('/imageBank/navigation/lsbSelected.png') no-repeat; border-bottom:none;}
+.newMaster_leftSidebarCell {background-color:#F4F4F4; width: 200px; padding-right: 8px; padding-left: 8px;}
+
+.navigation_header {width:230px; height:51px; background:url('/imageBank/navigation/col_logo.png') no-repeat; margin-top:45px; margin-left:10px; float: left; }
+.navigation_whitespaceLinks {position:absolute; z-index:3; top:6px; right:10px; width:300px; height: 25px;   text-align:right; }
+    .navigation_whitespaceLinks a {color:#346e94; text-decoration:none; font-size:9pt; padding-left:5px;  }
+    .navigation_whitespaceLinks strong {color:#346e94; padding-left:5px; font-size:9pt;}
+    .navigation_whitespaceLinks span {padding-right:15px; font-size:9pt;}
+
+.navigation_mainButton {width:50px; height:50px; position:absolute; top:43px; cursor:pointer; }
+.navigation_mainButton_highlight {background:url('/imageBank/navigation/selectedIcon.png') 0px 0px no-repeat;}
+.navigation_mainButton_highlightGreen {background:url('/imageBank/navigation/selectedIconGreen.png') 0px 0px no-repeat;}
+    .navigation_mainButton span {width:100%; height:100%; display:block;}
+#navigation_mainButton_latest {right:580px;}
+    #navigation_mainButton_latest span {background:url('/imageBank/navigation/latest.png') 7px 7px no-repeat; color:white; font-size:13pt; padding-top:18px;  font-weight:bold; text-align:center; }
+
+#navigation_mainButton_projects {right:520px;}
+    #navigation_mainButton_projects span {background:url('/imageBank/navigation/projects.png') 7px 7px no-repeat; }
+#navigation_mainButton_files {right:455px;}
+    #navigation_mainButton_files span {background:url('/imageBank/navigation/files.png') 7px 7px no-repeat; }
+#navigation_mainButton_contacts { right:385px;}
+    #navigation_mainButton_contacts span {background:url('/imageBank/navigation/contacts.png') 7px 7px no-repeat;}
+#navigation_mainButton_pro {width:98px; right:275px; }
+    #navigation_mainButton_pro span {background:url('/imageBank/navigation/proFeatures.png') 10px 8px no-repeat; }
+#navigation_mainButton_apps { right:215px;}
+    #navigation_mainButton_apps span {background:url('/imageBank/navigation/apps.png') 7px 7px no-repeat;}
+
+.navigation_vertDivider {width:1px; height:55px; position:absolute; right:205px; top:40px; border-left:solid 1px white;}
+
+.navigation_secondaryButton{position:absolute; cursor:pointer; }
+#navigation_secondaryButton_upgrade {right:125px; top:54px; width:60px; height:28px; background:url('/imageBank/navigation/upgrade.png') no-repeat; }
+#navigation_secondaryButton_settings {right:75px; top:51px; width:35px; height:35px; background:url('/imageBank/navigation/settings.png') no-repeat;}
+#navigation_secondaryButton_search {right:25px; top:51px; width:35px; height:35px; background:url('/imageBank/navigation/search.png') no-repeat;}
+
+#navigation_headerWrap {width: 100%; height: 106px; overflow: hidden; min-width:1080px; position:relative;}

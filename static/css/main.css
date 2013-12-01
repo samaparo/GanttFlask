@@ -1,0 +1,166 @@
+#toolbarWrap {
+  padding-left: 25px; }
+  #toolbarWrap span {
+    color: #4099ff;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-right: 5px;
+    cursor: pointer; }
+
+#mainWrap {
+  width: 1000px;
+  height: 500px;
+  border: solid 1px #d0d0d0;
+  overflow: hidden; }
+
+#gantt {
+  width: 1000px;
+  height: 100%;
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: scroll; }
+  #gantt #numberWrap {
+    display: inline-block;
+    width: 25px;
+    z-index: 5;
+    position: absolute;
+    left: 0px;
+    top: 71px;
+    border-right: solid 1px #d0d0d0;
+    border-top: solid 1px #d0d0d0; }
+    #gantt #numberWrap div {
+      width: 100%;
+      height: 25px;
+      float: left;
+      border-bottom: solid 1px #d0d0d0;
+      background-color: #F0F2F1;
+      text-align: center; }
+      #gantt #numberWrap div span {
+        font-size: 8pt;
+        color: #464749;
+        font-weight: bold; }
+  #gantt #eventWrap {
+    position: absolute;
+    z-index: 3;
+    left: 26px;
+    top: 72px;
+    height: 100%; }
+    #gantt #eventWrap .event {
+      position: absolute !important;
+      height: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: #dfecf5;
+      border: solid 1px #bbc9d2;
+      cursor: pointer; }
+      #gantt #eventWrap .event span {
+        color: #616e77;
+        font-size: 8pt; }
+      #gantt #eventWrap .event span:first-child {
+        font-weight: bold;
+        padding-left: 3px; }
+    #gantt #eventWrap .highlighted {
+      background-color: #ffdd8a;
+      border-color: #f7c13e; }
+      #gantt #eventWrap .highlighted span {
+        color: #555555; }
+  #gantt #gridWrap {
+    position: absolute;
+    font-size: 0;
+    white-space: nowrap;
+    z-index: 2;
+    left: 25px;
+    top: 72px;
+    height: 100%;
+    min-height: 500px;
+    border-left: solid 1px #d0d0d0; }
+    #gantt #gridWrap div {
+      display: inline-block;
+      width: 25px;
+      height: 100%;
+      border-left: solid 1px #d0d0d0;
+      border-left-style: dashed; }
+    #gantt #gridWrap div:first-child {
+      border-left: none !important; }
+    #gantt #gridWrap .dayOff {
+      background-color: #F9F9F9; }
+    #gantt #gridWrap .firstDayOfMonth {
+      border-left-style: solid; }
+  #gantt #monthWrap {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 2;
+    font-size: 0;
+    left: 25px;
+    top: 0px;
+    height: 71px;
+    border-bottom: solid 1px #d0d0d0;
+    border-left: solid 1px #d0d0d0; }
+    #gantt #monthWrap .month {
+      display: inline-block;
+      height: 100%;
+      overflow: hidden;
+      border-right: solid 1px #d0d0d0; }
+      #gantt #monthWrap .month .top {
+        height: 39px;
+        float: left;
+        background-color: #F2F9FD;
+        border-bottom: solid 1px #d0d0d0; }
+        #gantt #monthWrap .month .top span {
+          font-size: 9pt;
+          float: left;
+          width: 100%;
+          color: gray;
+          padding-left: 5px; }
+      #gantt #monthWrap .month .bottom {
+        height: 31px;
+        float: left; }
+        #gantt #monthWrap .month .bottom div {
+          width: 25px;
+          height: 31px;
+          float: left;
+          border-left: solid 1px #d0d0d0;
+          overflow: hidden;
+          text-align: center; }
+          #gantt #monthWrap .month .bottom div span {
+            display: block;
+            font-size: 8pt; }
+        #gantt #monthWrap .month .bottom div:first-child {
+          border-left: none; }
+
+/*#list{
+	width:25px; 
+	height:100%;
+	float:left;
+	border-right:$light-border;
+	overflow:hidden;
+	position:relative;
+
+	#numberWrap {
+		width:26px;
+		height:100%;
+		position:absolute;
+		left:0px;
+		top:71px;
+		border-top:$light-border;
+
+		div{
+			width:100%;
+			height:25px;
+			float:left;
+			border-bottom: $light-border;
+			background-color:#F0F2F1;
+			text-align: center;
+
+			span{
+				font-size: 8pt;
+				color: #464749;
+				font-weight:bold;
+			}
+		}
+	}
+
+}*/
