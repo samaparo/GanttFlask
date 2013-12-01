@@ -26,7 +26,6 @@ app.Models = app.Models || {};
 			return end;
 		},
 		defaults: {
-			id: -1,
 			name: "New Event",
 			startDate: null,
 			endDate: null,

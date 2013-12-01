@@ -29,7 +29,7 @@ app.Collections = app.Collections || {};
 					var newStart = new Date(app.gridStart.getFullYear(), app.gridStart.getMonth(), dayPosition + 1);
 					var dayDelta = Math.ceil((newStart.getTime() - me.model.startAsDate().getTime()) / me.dayInMS);
 					var newEnd = new Date(me.model.endAsDate().getFullYear(), me.model.endAsDate().getMonth(), me.model.endAsDate().getDate() + dayDelta);
-					me.model.set({startDate: app.Utils.getDateStringMMDDYYYY(newStart), endDate: app.Utils.getDateStringMMDDYYYY(newEnd)});
+					me.model.save({startDate: app.Utils.getDateStringMMDDYYYY(newStart), endDate: app.Utils.getDateStringMMDDYYYY(newEnd)});
 				}
 			}).disableSelection();
 			

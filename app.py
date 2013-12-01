@@ -80,7 +80,7 @@ def updateTask(taskID):
 @app.route('/api/tasks/<int:taskID>', methods=['DELETE'])
 def deleteTask(taskID):
 	matchingTask = Task.query.filter_by(id=taskID).first()
-	jsonData = request.get_json(force=True)
+	#jsonData = request.get_json(force=True)
 	if matchingTask == None:
 		abort(404)
 		

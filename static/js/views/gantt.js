@@ -78,8 +78,8 @@ app.Collections = app.Collections || {};
 			});
 			
 			//Eventually call destroy to use URL
-			//app.AllEvents.selectedEvent.destroy();
-			selectedEvent.trigger('destroy', app.AllEvents.selectedEvent, app.AllEvents);
+			app.AllEvents.selectedEvent.destroy();
+			//selectedEvent.trigger('destroy', app.AllEvents.selectedEvent, app.AllEvents);
 			app.AllEvents.unselect();
 			
 			this.numberWrap.find('div:last').remove();
@@ -103,7 +103,8 @@ app.Collections = app.Collections || {};
 			
 			var taskEndDate = new Date(taskStartDate.getFullYear(), taskStartDate.getMonth(), taskStartDate.getDate() + 4);
 			
-			var newEvent = new app.Models.Event({id: app.AllEvents.nextID(), name: taskName, startDate: app.Utils.getDateStringMMDDYYYY(taskStartDate), endDate: app.Utils.getDateStringMMDDYYYY(taskEndDate), number: taskNumber});
+			var newEvent = new app.Models.Event();
+			newEvent.save({name: taskName, startDate: app.Utils.getDateStringMMDDYYYY(taskStartDate), endDate: app.Utils.getDateStringMMDDYYYY(taskEndDate), number: taskNumber});
 			app.AllEvents.add(newEvent);
 			
 			this.extendGridFor(newEvent);
